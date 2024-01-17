@@ -63,18 +63,23 @@ export const Lottery = () => {
   };
 
   return (
-    <div>
-      <button onClick={handleClick}>לוטו</button>
-      <button onClick={increaseInterval}>+</button>
-      <button onClick={decreaseInterval}>-</button>
-      <span>{lotteryRowsNumber} :מספר השורות</span>
-      {
-        lotteryRows.map((lotteryRow, index) => (
-
-          <div key={index}>{`${lotteryRow.number1} ${lotteryRow.number2} ${lotteryRow.number3} ${lotteryRow.number4} ${lotteryRow.number5} ${lotteryRow.strongNumber && '| המספר החזק: '} ${lotteryRow.strongNumber}`}
-          </div>
-        ))
-      }
+    <div className="MainDiv">
+      <div className="LotteryButtons">
+        <button onClick={handleClick}>לוטו</button>
+        <button onClick={increaseInterval}>+</button>
+        <button onClick={decreaseInterval}>-</button>
+        <span>{lotteryRowsNumber} :מספר השורות</span>
+      </div>
+      <div className="LotteryRows">
+        <ul>
+          {
+            lotteryRows.map((lotteryRow, index) => (
+              <li key={index}>{`${lotteryRow.number1} ${lotteryRow.number2} ${lotteryRow.number3} ${lotteryRow.number4} ${lotteryRow.number5} ${lotteryRow.strongNumber && '| המספר החזק: '} ${lotteryRow.strongNumber}`}
+              </li>
+            ))
+          }
+      </ul>
+      </div>
     </div>
   );
 };

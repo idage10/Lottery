@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
+import './Main.css';
 import { Lottery } from './Lottery';
 import reportWebVitals from './reportWebVitals';
 

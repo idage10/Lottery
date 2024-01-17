@@ -1,0 +1,32 @@
+body {
+  
+  height: 100vh;
+}
+.LotteryButtons button, .LotteryButtons span {
+  margin-left: 10px;
+}
+.LotteryButtons {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  left: 50%;
+  transform: translateX(-50%); /* center the div horizontally */
+}
+.LotteryRows {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.LotteryRows ul {
+  direction: rtl;
+}
+.LotteryRows li {
+  margin-top: 10px;
+}
+.MainDiv {
+  top: 50px;
+  position: relative;
+}
