@@ -66,8 +66,8 @@ export const Lottery = () => {
     <div className="mainDiv">
       <div className="lotteryButtons">
         <button onClick={handleClick}>לוטו</button>
-        <button onClick={decreaseInterval}>-</button>
         <button onClick={increaseInterval}>+</button>
+        <button onClick={decreaseInterval}>-</button>
         <span className="rowsNumber">מספר השורות: {lotteryRowsNumber}</span>
       </div>
       <div className="lotteryRows">
@@ -81,7 +81,7 @@ export const Lottery = () => {
             {
               lotteryRows.map((lotteryRow, index) => (
                 <tr>
-                  <td>1</td>
+                  <td>{index + 1}</td>
                   <td>{lotteryRow.strongNumber}</td>
                   <td>{`${lotteryRow.number1} ${lotteryRow.number2} ${lotteryRow.number3} ${lotteryRow.number4} ${lotteryRow.number5}`}</td>
                 </tr>
