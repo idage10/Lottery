@@ -1,7 +1,12 @@
-.LotteryButtons button {
+.mainDiv {
+  top: 90px;
+  position: relative;
+  font-family: "Times New Roman";
+}
+.lotteryButtons button {
   margin-left: 15px;
 }
-.LotteryButtons button {
+.lotteryButtons button {
   background-color: #223977;
   color: #fff;
   border-radius: 6px;
@@ -11,43 +16,38 @@
   padding-right: 8px;
   font-size: 1.2em;
 }
-.LotteryButtons button:hover {
+.lotteryButtons button:hover {
   background-color: rgba(34, 57, 119, 0.7);
   color: #fff;
 }
-.LotteryButtons {
+.lotteryButtons {
   position: fixed;
   left: 50%; /* center the div horizontally */
   transform: translateX(-50%); /* center the div horizontally */
   direction: rtl;
   width: 22em;
 }
-.RowsNumber {
+.rowsNumber {
   color: #e31d1a;
   font-size: 23px;
   font-weight: 800;
 }
-.LotteryRows {
+.lotteryRows {
   display: flex; /* center the li horizontally */
   align-items: center; /* center the li horizontally */
   justify-content: center; /* center the li horizontally */
   flex-direction: column; /* center the li horizontally */
 }
-.LotteryRows ul {
+.lotteryRows table {
   direction: rtl;
   padding-inline-start: 15px;
-  padding-top: 20px;
-  padding-right: 10px;
+  padding-top: 40px;
   font-size: 1.2em;
   font-weight: 800;
+  width: 20em;
 }
-.LotteryRows li {
+.lotteryRows td {
   margin-top: 20px;
   list-style-type: decimal;
-  width: 15em;
-}
-.MainDiv {
-  top: 90px;
-  position: relative;
-  font-family: "Times New Roman";
+  width: 5em;
 }
