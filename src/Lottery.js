@@ -72,22 +72,26 @@ export const Lottery = () => {
       </div>
       <div className="lotteryRows">
         <table>
-          <th>
-            <td>שורה</td>
-            <td>מספר חזק</td>
-            <td>מספרים</td>
-          </th>
           <tr>
+            <th className="tdRowNumber">שורה</th>
+            <th className="tdStrongNumber">מספר חזק</th>
+            <th className="tdLotteryNumbers">מספרים</th>
+          </tr>
             {
               lotteryRows.map((lotteryRow, index) => (
                 <tr>
-                  <td>{index + 1}</td>
-                  <td>{lotteryRow.strongNumber}</td>
-                  <td>{`${lotteryRow.number1} ${lotteryRow.number2} ${lotteryRow.number3} ${lotteryRow.number4} ${lotteryRow.number5}`}</td>
+                  <td className="tdRowNumber">{index + 1}</td>
+                  <td className="tdStrongNumber">{lotteryRow.strongNumber}</td>
+                  <td className="tdLotteryNumbers">
+                    <span>{lotteryRow.number1}</span>
+                    <span>{lotteryRow.number2}</span>
+                    <span>{lotteryRow.number3}</span>
+                    <span>{lotteryRow.number4}</span>
+                    <span>{lotteryRow.number5}</span>
+                  </td>
                 </tr>
               ))
             }
-          </tr>
       </table>
       </div>
     </div>

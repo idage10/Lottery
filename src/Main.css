@@ -35,15 +35,30 @@
   justify-content: center; /* center the table horizontally */
   flex-direction: column; /* center the table horizontally */
 }
+td {
+  border: 1px solid black;
+}
 .lotteryRows table {
   direction: rtl;
   padding-top: 40px;
   font-size: 1.2em;
   font-weight: 800;
-  width: 20em;
-  padding-right: 0.7em;
+  padding-left: 2.5em;
 }
 .lotteryRows td {
   margin-top: 20px;
+  text-align: center;
+  vertical-align: middle;
+}
+.tdRowNumber {
+  width: 2em;
+}
+.tdStrongNumber {
   width: 5em;
+}
+.tdLotteryNumbers {
+  width: 8em;
+}
+.lotteryRows span {
+  margin: 0 5px;
 }
