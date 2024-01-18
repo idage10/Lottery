@@ -19,6 +19,7 @@
 .LotteryRows ul {
   direction: rtl;
   padding-inline-start: 15px;
+  padding-top: 20px;
 }
 .LotteryRows li {
   margin-top: 20px;
