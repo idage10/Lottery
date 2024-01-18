@@ -14,7 +14,7 @@
   align-items: center; /* center the li horizontally */
   justify-content: center; /* center the li horizontally */
   flex-direction: column; /* center the li horizontally */
-  font-size: 1.5em;
+  font-size: 1.3em;
 }
 .LotteryRows ul {
   direction: rtl;
