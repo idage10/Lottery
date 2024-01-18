@@ -1,4 +1,4 @@
-.LotteryButtons button, .LotteryButtons span {
+.LotteryButtons button {
   margin-left: 15px;
 }
 .LotteryButtons button {
@@ -9,7 +9,7 @@
   letter-spacing: 1px;
   padding-left: 8px;
   padding-right: 8px;
-  font-size: 1.3em;
+  font-size: 1.2em;
 }
 .LotteryButtons button:hover {
   background-color: rgba(34, 57, 119, 0.7);
@@ -24,7 +24,7 @@
 }
 .RowsNumber {
   color: #e31d1a;
-  font-size: 25px;
+  font-size: 23px;
   font-weight: 800;
 }
 .LotteryRows {
