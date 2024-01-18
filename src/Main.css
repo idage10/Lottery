@@ -1,6 +1,19 @@
 .LotteryButtons button, .LotteryButtons span {
   margin-left: 15px;
-  font-size: 1.5em;
+}
+.LotteryButtons button {
+  background-color: #223977;
+  color: #fff;
+  border-radius: 6px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  padding-left: 8px;
+  padding-right: 8px;
+  font-size: 1.3em;
+}
+.LotteryButtons button:hover {
+  background-color: rgba(34, 57, 119, 0.7);
+  color: #fff;
 }
 .LotteryButtons {
   position: fixed;
@@ -8,6 +21,11 @@
   transform: translateX(-50%); /* center the div horizontally */
   direction: rtl;
   width: 22em;
+}
+.RowsNumber {
+  color: #e31d1a;
+  font-size: 25px;
+  font-weight: 800;
 }
 .LotteryRows {
   display: flex; /* center the li horizontally */

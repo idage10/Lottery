@@ -66,9 +66,9 @@ export const Lottery = () => {
     <div className="MainDiv">
       <div className="LotteryButtons">
         <button onClick={handleClick}>לוטו</button>
-        <button onClick={increaseInterval}>+</button>
         <button onClick={decreaseInterval}>-</button>
-        <span>מספר השורות: {lotteryRowsNumber}</span>
+        <button onClick={increaseInterval}>+</button>
+        <span className="RowsNumber">מספר השורות: {lotteryRowsNumber}</span>
       </div>
       <div className="LotteryRows">
         <ul>
