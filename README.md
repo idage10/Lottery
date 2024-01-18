@@ -1,3 +1,14 @@
+# To publish to githubpages:
+Add "homepage": "https://idage10.github.io/Lottery to first brackets
+
+Add to scripts brackets:
+"predeploy": "npm run build",
+"deploy": "gh-pages -d build"
+
+Run commands:
+npm i gh-pages --save-dev
+npm run deploy
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
