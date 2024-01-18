@@ -7,7 +7,7 @@
   left: 50%; /* center the div horizontally */
   transform: translateX(-50%); /* center the div horizontally */
   direction: rtl;
-  width: 22em;
+  width: 24em;
 }
 .LotteryRows {
   display: flex; /* center the li horizontally */
