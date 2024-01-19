@@ -47,15 +47,15 @@ export const Lottery = () => {
     }
   };
 
-  const increaseInterval = () => {
+  const increaseRowsNumber = () => {
     // Check that the lotteryRowsNumber is less than the maximum value, say 10
-    if (lotteryRowsNumber < 10) {
+    if (lotteryRowsNumber < 14) {
       // Increase the lotteryRowsNumber by 1
       setLotteryRowsNumber(lotteryRowsNumber + 1);
     }
   };
   
-  const decreaseInterval = () => {
+  const decreaseRowsNumber = () => {
     // Check that the lotteryRowsNumber is greater than the minimum value, say 1
     if (lotteryRowsNumber > 1) {
       // Decrease the lotteryRowsNumber by 1
@@ -63,13 +63,19 @@ export const Lottery = () => {
     }
   };
 
+  const resetRowsNumber = () => {
+    setLotteryRowsNumber(1);
+    setLotteryRows([]);
+  };
+
   return (
     <div className="mainDiv">
       <div className="rowsNumber">מספר השורות: {lotteryRowsNumber}</div>
       <div className="lotteryButtons">
-        <button onClick={handleClick}>לוטו</button>
-        <button onClick={increaseInterval}>+</button>
-        <button onClick={decreaseInterval}>-</button>
+        <button onClick={handleClick}>הגרל מספרים</button>
+        <button onClick={increaseRowsNumber}>+</button>
+        <button onClick={decreaseRowsNumber}>-</button>
+        <button onClick={resetRowsNumber}>אפס</button>
       </div>
       <div className="lotteryRows">
         {lotteryRows.length > 0 ? ( // Check if the lotteryRows array is not empty
@@ -85,12 +91,12 @@ export const Lottery = () => {
                     <td className="tdRowNumber">{index + 1}</td>
                     <td className="tdStrongNumber"><span className="strongNumberCircle">{lotteryRow.strongNumber}</span></td>
                     <td className="tdLotteryNumbers">
-                      <span className="tdLotteryNumbersCircle">{lotteryRow.number1}</span>
-                      <span className="tdLotteryNumbersCircle">{lotteryRow.number2}</span>
-                      <span className="tdLotteryNumbersCircle">{lotteryRow.number3}</span>
-                      <span className="tdLotteryNumbersCircle">{lotteryRow.number4}</span>
-                      <span className="tdLotteryNumbersCircle">{lotteryRow.number5}</span>
-                      <span className="tdLotteryNumbersCircle">{lotteryRow.number6}</span>
+                      <span className="lotteryNumbersCircle">{lotteryRow.number1}</span>
+                      <span className="lotteryNumbersCircle">{lotteryRow.number2}</span>
+                      <span className="lotteryNumbersCircle">{lotteryRow.number3}</span>
+                      <span className="lotteryNumbersCircle">{lotteryRow.number4}</span>
+                      <span className="lotteryNumbersCircle">{lotteryRow.number5}</span>
+                      <span className="lotteryNumbersCircle">{lotteryRow.number6}</span>
                     </td>
                   </tr>
                 ))
