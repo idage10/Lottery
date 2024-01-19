@@ -34,13 +34,13 @@ export const Lottery = () => {
       // Generate new numbers for each state
       let currentRow = [];
       let lotteryRow = {
-        "number1": getRandomNumber(1, 37, currentRow),
-        "number2": getRandomNumber(1, 37, currentRow),
-        "number3": getRandomNumber(1, 37, currentRow),
-        "number4": getRandomNumber(1, 37, currentRow),
-        "number5": getRandomNumber(1, 37, currentRow),
-        "number6": getRandomNumber(1, 37, currentRow),
-        "strongNumber": getRandomNumber(1, 7, null)
+        number1: getRandomNumber(1, 37, currentRow),
+        number2: getRandomNumber(1, 37, currentRow),
+        number3: getRandomNumber(1, 37, currentRow),
+        number4: getRandomNumber(1, 37, currentRow),
+        number5: getRandomNumber(1, 37, currentRow),
+        number6: getRandomNumber(1, 37, currentRow),
+        strongNumber: getRandomNumber(1, 7, null)
       }
       
       setLotteryRows(prevLotteryRows => [...prevLotteryRows, lotteryRow]);

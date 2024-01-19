@@ -10,6 +10,9 @@
   flex-direction: row; /* center the div horizontally */
   direction: rtl;
 }
+.lotteryButtons button:hover, .lotteryButtons button:active {
+  background-color: rgba(34, 57, 119, 0.7);
+}
 .lotteryButtons button {
   background-color: #223977;
   color: #fff;
