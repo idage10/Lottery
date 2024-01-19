@@ -21,9 +21,6 @@
   font-size: 1.2em;
   margin-left: 15px;
 }
-.lotteryButtons button:hover {
-  background-color: rgba(34, 57, 119, 0.7);
-}
 .rowsNumber {
   display: flex; /* center the rows horizontally */
   align-items: center; /* center the rows horizontally */
