@@ -60,10 +60,10 @@ td {
   width: 5em;
 }
 .tdLotteryNumbers {
-  width: 13em;
+  width: 11em;
 }
 .lotteryRows .tdLotteryNumbersCircle {
-  margin: 0 5px;
+  margin: 0 3px;
   background-color: #e31d1a;
   border-radius: 50%;
   width: 1.5em;
