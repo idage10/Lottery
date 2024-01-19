@@ -83,14 +83,14 @@ export const Lottery = () => {
                 lotteryRows.map((lotteryRow, index) => (
                   <tr>
                     <td className="tdRowNumber">{index + 1}</td>
-                    <td className="tdStrongNumber">{lotteryRow.strongNumber}</td>
+                    <td className="tdStrongNumber"><span className="strongNumberCircle">{lotteryRow.strongNumber}</span></td>
                     <td className="tdLotteryNumbers">
-                      <span>{lotteryRow.number1}</span>
-                      <span>{lotteryRow.number2}</span>
-                      <span>{lotteryRow.number3}</span>
-                      <span>{lotteryRow.number4}</span>
-                      <span>{lotteryRow.number5}</span>
-                      <span>{lotteryRow.number6}</span>
+                      <span className="tdLotteryNumbersCircle">{lotteryRow.number1}</span>
+                      <span className="tdLotteryNumbersCircle">{lotteryRow.number2}</span>
+                      <span className="tdLotteryNumbersCircle">{lotteryRow.number3}</span>
+                      <span className="tdLotteryNumbersCircle">{lotteryRow.number4}</span>
+                      <span className="tdLotteryNumbersCircle">{lotteryRow.number5}</span>
+                      <span className="tdLotteryNumbersCircle">{lotteryRow.number6}</span>
                     </td>
                   </tr>
                 ))
