@@ -39,7 +39,8 @@ export const Lottery = () => {
         "number3": getRandomNumber(1, 37, currentRow),
         "number4": getRandomNumber(1, 37, currentRow),
         "number5": getRandomNumber(1, 37, currentRow),
-        "strongNumber": getRandomNumber(1, 10, null)
+        "number6": getRandomNumber(1, 37, currentRow),
+        "strongNumber": getRandomNumber(1, 7, null)
       }
       
       setLotteryRows(prevLotteryRows => [...prevLotteryRows, lotteryRow]);
@@ -89,6 +90,7 @@ export const Lottery = () => {
                       <span>{lotteryRow.number3}</span>
                       <span>{lotteryRow.number4}</span>
                       <span>{lotteryRow.number5}</span>
+                      <span>{lotteryRow.number6}</span>
                     </td>
                   </tr>
                 ))

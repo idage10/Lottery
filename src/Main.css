@@ -28,6 +28,7 @@
   color: #e31d1a;
   font-size: 23px;
   font-weight: 800;
+  margin-right: 0.5em;
 }
 .lotteryRows {
   display: flex; /* center the table horizontally */
@@ -43,7 +44,6 @@ td {
   padding-top: 40px;
   font-size: 1.2em;
   font-weight: 800;
-  padding-left: 1em;
 }
 .lotteryRows td {
   margin-top: 20px;
@@ -57,7 +57,7 @@ td {
   width: 5em;
 }
 .tdLotteryNumbers {
-  width: 8em;
+  width: 10em;
 }
 .lotteryRows span {
   margin: 0 5px;
