@@ -9,6 +9,7 @@
   transform: translateX(-50%); /* center the div horizontally */
   direction: rtl;
   width: 22em;
+  z-index: 999;
 }
 .lotteryButtons button {
   background-color: #223977;
@@ -30,10 +31,9 @@
   font-weight: 800;
 }
 .lotteryRows {
-  display: flex; /* center the table horizontally */
-  align-items: center; /* center the table horizontally */
-  justify-content: center; /* center the table horizontally */
-  flex-direction: column; /* center the table horizontally */
+  position: fixed;
+  left: 50%; /* center the div horizontally */
+  transform: translateX(-50%); /* center the div horizontally */
 }
 td {
   border: 1px solid black;
@@ -54,7 +54,7 @@ td {
   width: 2em;
 }
 .tdStrongNumber {
-  width: 5em;
+  width: 99px;
 }
 .tdLotteryNumbers {
   width: 8em;
