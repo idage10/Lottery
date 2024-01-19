@@ -71,28 +71,32 @@ export const Lottery = () => {
         <span className="rowsNumber">מספר השורות: {lotteryRowsNumber}</span>
       </div>
       <div className="lotteryRows">
-        <table>
-          <tr>
-            <th className="tdRowNumber">שורה</th>
-            <th className="tdStrongNumber">מספר חזק</th>
-            <th className="tdLotteryNumbers">מספרים</th>
-          </tr>
-            {
-              lotteryRows.map((lotteryRow, index) => (
-                <tr>
-                  <td className="tdRowNumber">{index + 1}</td>
-                  <td className="tdStrongNumber">{lotteryRow.strongNumber}</td>
-                  <td className="tdLotteryNumbers">
-                    <span>{lotteryRow.number1}</span>
-                    <span>{lotteryRow.number2}</span>
-                    <span>{lotteryRow.number3}</span>
-                    <span>{lotteryRow.number4}</span>
-                    <span>{lotteryRow.number5}</span>
-                  </td>
-                </tr>
-              ))
-            }
-      </table>
+        {lotteryRows.length > 0 ? ( // Check if the lotteryRows array is not empty
+          <table>
+            <tr>
+              <th className="tdRowNumber">שורה</th>
+              <th className="tdStrongNumber">מספר חזק</th>
+              <th className="tdLotteryNumbers">מספרים</th>
+            </tr>
+              {
+                lotteryRows.map((lotteryRow, index) => (
+                  <tr>
+                    <td className="tdRowNumber">{index + 1}</td>
+                    <td className="tdStrongNumber">{lotteryRow.strongNumber}</td>
+                    <td className="tdLotteryNumbers">
+                      <span>{lotteryRow.number1}</span>
+                      <span>{lotteryRow.number2}</span>
+                      <span>{lotteryRow.number3}</span>
+                      <span>{lotteryRow.number4}</span>
+                      <span>{lotteryRow.number5}</span>
+                    </td>
+                  </tr>
+                ))
+              }
+          </table>
+        ) : ( // If the lotteryRows array is empty, render nothing
+          null
+        )}
       </div>
     </div>
   );
