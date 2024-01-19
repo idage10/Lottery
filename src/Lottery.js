@@ -65,11 +65,11 @@ export const Lottery = () => {
 
   return (
     <div className="mainDiv">
+      <div className="rowsNumber">מספר השורות: {lotteryRowsNumber}</div>
       <div className="lotteryButtons">
         <button onClick={handleClick}>לוטו</button>
         <button onClick={increaseInterval}>+</button>
         <button onClick={decreaseInterval}>-</button>
-        <span className="rowsNumber">מספר השורות: {lotteryRowsNumber}</span>
       </div>
       <div className="lotteryRows">
         {lotteryRows.length > 0 ? ( // Check if the lotteryRows array is not empty

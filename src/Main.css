@@ -4,9 +4,10 @@
   font-family: "Times New Roman";
 }
 .lotteryButtons {
-  position: fixed;
-  left: 50%; /* center the div horizontally */
-  transform: translateX(-50%); /* center the div horizontally */
+  display: flex; /* center the div horizontally */
+  align-items: center; /* center the div horizontally */
+  justify-content: center; /* center the div horizontally */
+  flex-direction: row; /* center the div horizontally */
   direction: rtl;
 }
 .lotteryButtons button {
@@ -24,8 +25,12 @@
   background-color: rgba(34, 57, 119, 0.7);
 }
 .rowsNumber {
+  display: flex; /* center the rows horizontally */
+  align-items: center; /* center the rows horizontally */
+  justify-content: center; /* center the rows horizontally */
+  flex-direction: row; /* center the rows horizontally */
   color: #e31d1a;
-  font-size: 23px;
+  font-size: 25px;
   font-weight: 800;
 }
 .lotteryRows {
@@ -39,7 +44,7 @@ td {
 }
 .lotteryRows table {
   direction: rtl;
-  padding-top: 40px;
+  padding-top: 20px;
   font-size: 1.2em;
   font-weight: 800;
 }
