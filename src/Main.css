@@ -28,7 +28,6 @@
   color: #e31d1a;
   font-size: 23px;
   font-weight: 800;
-  margin-right: 0.5em;
 }
 .lotteryRows {
   display: flex; /* center the table horizontally */
