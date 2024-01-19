@@ -8,7 +8,6 @@
   left: 50%; /* center the div horizontally */
   transform: translateX(-50%); /* center the div horizontally */
   direction: rtl;
-  width: 22em;
 }
 .lotteryButtons button {
   background-color: #223977;
