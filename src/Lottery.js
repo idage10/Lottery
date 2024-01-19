@@ -76,8 +76,8 @@ export const Lottery = () => {
           <table>
             <tr>
               <th className="tdRowNumber">שורה</th>
-              <th className="tdStrongNumber">מספר חזק</th>
-              <th className="tdLotteryNumbers">מספרים</th>
+              <th className="tdStrongNumber">המספר החזק</th>
+              <th className="tdLotteryNumbers">מספרים שהוגרלו</th>
             </tr>
               {
                 lotteryRows.map((lotteryRow, index) => (
