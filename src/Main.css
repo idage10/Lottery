@@ -3,6 +3,12 @@
   position: relative;
   font-family: "Times New Roman";
 }
+.lotteryTitleStyle {
+  margin-left: 0.2em;
+}
+.rowsNumber {
+  color: #000;
+}
 .lotteryButtons {
   display: flex; /* center the div horizontally */
   align-items: center; /* center the div horizontally */
@@ -24,12 +30,11 @@
   font-size: 1.2em;
   margin-left: 15px;
 }
-.rowsNumber {
+.headlineTitle {
   display: flex; /* center the rows horizontally */
   align-items: center; /* center the rows horizontally */
   justify-content: center; /* center the rows horizontally */
   flex-direction: row; /* center the rows horizontally */
-  color: #e31d1a;
   font-size: 25px;
   font-weight: 800;
 }
@@ -60,16 +65,7 @@ td {
 }
 .lotteryRows .lotteryNumbersCircle {
   margin: 0 3px;
-  background-color: #e31d1a;
   color: #fff;
-  border-radius: 50%;
-  width: 1.5em;
-  height: 1.3em;
-  display: inline-block;
-  padding-top: 3px;
-}
-.lotteryRows .strongNumberCircle {
-  background-color: #99d4f0;
   border-radius: 50%;
   width: 1.5em;
   height: 1.3em;

@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "./Main.css";
+import "./Lottery.css";
 
 // A custom hook to generate a random number in a given range
 const getRandomNumber = (min, max, currentRow) => {
@@ -71,7 +71,7 @@ export const Lottery = () => {
 
   return (
     <div className="mainDiv">
-      <div className="rowsNumber">מספר השורות: {lotteryRowsNumber}</div>
+      <div className="headlineTitle"><span className="rowsNumber">מספר השורות: {lotteryRowsNumber}</span><span className="lotteryTitleStyle lotteryTitle">- הגרלת לוטו</span></div>
       <div className="lotteryButtons">
         <button onClick={handleClick}>הגרל מספרים</button>
         <button onClick={increaseRowsNumber}>+</button>

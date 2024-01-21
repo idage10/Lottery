@@ -71,7 +71,7 @@ export const Seven = () => {
 
   return (
     <div className="mainDiv">
-      <div className="rowsNumber">מספר השורות: {lotteryRowsNumber}</div>
+      <div className="headlineTitle"><span className="rowsNumber">מספר השורות: {lotteryRowsNumber}</span><span className="lotteryTitleStyle lotterySevenTitle">- הגרלת 777</span></div>
       <div className="lotteryButtons">
         <button onClick={handleClick}>הגרל מספרים</button>
         <button onClick={increaseRowsNumber}>+</button>
@@ -83,20 +83,20 @@ export const Seven = () => {
           <table>
             <tr>
               <th className="tdRowNumber">שורה</th>
-              <th className="tdLotteryNumbers">מספרים שהוגרלו</th>
+              <th className="tdLotterySevenNumbers">מספרים שהוגרלו</th>
             </tr>
               {
                 lotteryRows.map((lotteryRow, index) => (
                   <tr>
                     <td className="tdRowNumber">{index + 1}</td>
-                    <td className="tdLotteryNumbers">
-                      <span className="lotteryNumbersCircle">{lotteryRow.number1}</span>
-                      <span className="lotteryNumbersCircle">{lotteryRow.number2}</span>
-                      <span className="lotteryNumbersCircle">{lotteryRow.number3}</span>
-                      <span className="lotteryNumbersCircle">{lotteryRow.number4}</span>
-                      <span className="lotteryNumbersCircle">{lotteryRow.number5}</span>
-                      <span className="lotteryNumbersCircle">{lotteryRow.number6}</span>
-                      <span className="lotteryNumbersCircle">{lotteryRow.number7}</span>
+                    <td className="tdLotterySevenNumbers">
+                      <span className="lotteryNumbersCircle lotterySevenNumbersCircle">{lotteryRow.number1}</span>
+                      <span className="lotteryNumbersCircle lotterySevenNumbersCircle">{lotteryRow.number2}</span>
+                      <span className="lotteryNumbersCircle lotterySevenNumbersCircle">{lotteryRow.number3}</span>
+                      <span className="lotteryNumbersCircle lotterySevenNumbersCircle">{lotteryRow.number4}</span>
+                      <span className="lotteryNumbersCircle lotterySevenNumbersCircle">{lotteryRow.number5}</span>
+                      <span className="lotteryNumbersCircle lotterySevenNumbersCircle">{lotteryRow.number6}</span>
+                      <span className="lotteryNumbersCircle lotterySevenNumbersCircle">{lotteryRow.number7}</span>
                     </td>
                   </tr>
                 ))

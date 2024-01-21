@@ -1,3 +1,17 @@
+.lotteryTitle {
+  color: #e31d1a;
+}
 .tdLotteryNumbers {
-    width: 11.3em;
-  }
+  width: 11.3em;
+}
+.lotteryRows .lotteryNumbersCircle {
+  background-color: #e31d1a;
+}
+.lotteryRows .strongNumberCircle {
+  background-color: #99d4f0;
+  border-radius: 50%;
+  width: 1.5em;
+  height: 1.3em;
+  display: inline-block;
+  padding-top: 3px;
+}

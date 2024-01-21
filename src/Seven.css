@@ -1,3 +1,9 @@
-.tdLotteryNumbers {
+.lotterySevenTitle {
+  color: #eb1e75;
+}
+.tdLotterySevenNumbers {
     width: 14em;
-  }
+}
+.lotteryRows .lotterySevenNumbersCircle {
+  background-color: #eb1e75;
+}
