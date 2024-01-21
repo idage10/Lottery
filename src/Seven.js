@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "./Main.css";
+import "./Seven.css";
 
 // A custom hook to generate a random number in a given range
 const getRandomNumber = (min, max, currentRow) => {
@@ -22,7 +22,7 @@ const getRandomNumber = (min, max, currentRow) => {
 };
 
 // A functional component to display the lottery button and numbers
-export const Lottery = () => {
+export const Seven = () => {
   // Use the custom hook to generate lotteryRowsNumber button
   const [lotteryRowsNumber, setLotteryRowsNumber] = useState(1);
   // Use the custom hook to generate lottery rows list
@@ -35,13 +35,13 @@ export const Lottery = () => {
       // Generate new numbers for each state
       let currentRow = [];
       let lotteryRow = {
-        number1: getRandomNumber(1, 37, currentRow),
-        number2: getRandomNumber(1, 37, currentRow),
-        number3: getRandomNumber(1, 37, currentRow),
-        number4: getRandomNumber(1, 37, currentRow),
-        number5: getRandomNumber(1, 37, currentRow),
-        number6: getRandomNumber(1, 37, currentRow),
-        strongNumber: getRandomNumber(1, 7, null)
+        number1: getRandomNumber(1, 70, currentRow),
+        number2: getRandomNumber(1, 70, currentRow),
+        number3: getRandomNumber(1, 70, currentRow),
+        number4: getRandomNumber(1, 70, currentRow),
+        number5: getRandomNumber(1, 70, currentRow),
+        number6: getRandomNumber(1, 70, currentRow),
+        number7: getRandomNumber(1, 70, currentRow)
       }
       
       setLotteryRows(prevLotteryRows => [...prevLotteryRows, lotteryRow]);
@@ -50,7 +50,7 @@ export const Lottery = () => {
 
   const increaseRowsNumber = () => {
     // Check that the lotteryRowsNumber is less than the maximum value, say 10
-    if (lotteryRowsNumber < 14) {
+    if (lotteryRowsNumber < 3) {
       // Increase the lotteryRowsNumber by 1
       setLotteryRowsNumber(lotteryRowsNumber + 1);
     }
@@ -83,14 +83,12 @@ export const Lottery = () => {
           <table>
             <tr>
               <th className="tdRowNumber">שורה</th>
-              <th className="tdStrongNumber">המספר החזק</th>
               <th className="tdLotteryNumbers">מספרים שהוגרלו</th>
             </tr>
               {
                 lotteryRows.map((lotteryRow, index) => (
                   <tr>
                     <td className="tdRowNumber">{index + 1}</td>
-                    <td className="tdStrongNumber"><span className="strongNumberCircle">{lotteryRow.strongNumber}</span></td>
                     <td className="tdLotteryNumbers">
                       <span className="lotteryNumbersCircle">{lotteryRow.number1}</span>
                       <span className="lotteryNumbersCircle">{lotteryRow.number2}</span>
@@ -98,6 +96,7 @@ export const Lottery = () => {
                       <span className="lotteryNumbersCircle">{lotteryRow.number4}</span>
                       <span className="lotteryNumbersCircle">{lotteryRow.number5}</span>
                       <span className="lotteryNumbersCircle">{lotteryRow.number6}</span>
+                      <span className="lotteryNumbersCircle">{lotteryRow.number7}</span>
                     </td>
                   </tr>
                 ))

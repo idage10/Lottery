@@ -58,9 +58,6 @@ td {
 .tdStrongNumber {
   width: 6em;
 }
-.tdLotteryNumbers {
-  width: 11.3em;
-}
 .lotteryRows .lotteryNumbersCircle {
   margin: 0 3px;
   background-color: #e31d1a;
