@@ -3,6 +3,9 @@
 }
 .tdLotteryNumbers {
   width: 13.1em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .lotteryRows .lotteryNumbersCircle {
   background-color: #e31d1a;
@@ -13,5 +16,4 @@
   width: 1.9em;
   height: 1.6em;
   display: inline-block;
-  text-align: center;
 }
