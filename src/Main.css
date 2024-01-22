@@ -8,6 +8,7 @@
 }
 .rowsNumber {
   color: #000;
+  margin-left: 0.8em;
 }
 .lotteryButtons {
   display: flex; /* center the div horizontally */
