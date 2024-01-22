@@ -31,7 +31,7 @@
 .lotteryButtons button:hover {
   background-color: rgba(34, 57, 119, 0.7);
 }
-@media only screen and (max-width: 450px) {
+@media only screen and (max-width: 800px) {
   .lotteryButtons button:hover {
     background-color: #223977;
   }
