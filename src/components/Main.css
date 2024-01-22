@@ -2,13 +2,28 @@
   top: 90px;
   position: relative;
 }
+.headlineTitle {
+  display: flex; /* center the rows horizontally */
+  align-items: center; /* center the rows horizontally */
+  justify-content: center; /* center the rows horizontally */
+  flex-direction: row; /* center the rows horizontally */
+  font-size: 25px;
+  font-weight: 800;
+  margin-right: 1.2em;
+}
+.lotteryRows {
+  display: flex; /* center the table horizontally */
+  align-items: center; /* center the table horizontally */
+  justify-content: center; /* center the table horizontally */
+  flex-direction: column; /* center the table horizontally */
+}
 .lotteryTitleStyle {
   margin-left: 0.3em;
 }
 .rowsNumber {
   color: #223977;
   margin-left: 0.5em;
-  width: 5em;
+  width: 5.5em;
 }
 .lotteryButtons {
   display: flex; /* center the div horizontally */
@@ -34,21 +49,6 @@
   .lotteryButtons button:hover {
     background-color: #223977;
   }
-}
-.headlineTitle {
-  display: flex; /* center the rows horizontally */
-  align-items: center; /* center the rows horizontally */
-  justify-content: center; /* center the rows horizontally */
-  flex-direction: row; /* center the rows horizontally */
-  font-size: 25px;
-  font-weight: 800;
-  margin-right: 0.5em;
-}
-.lotteryRows {
-  display: flex; /* center the table horizontally */
-  align-items: center; /* center the table horizontally */
-  justify-content: center; /* center the table horizontally */
-  flex-direction: column; /* center the table horizontally */
 }
 td {
   background-color: #ececec;
