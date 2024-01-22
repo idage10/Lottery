@@ -71,7 +71,7 @@ export const Lottery = () => {
 
   return (
     <div className="mainDiv">
-      <div className="headlineTitle"><span className="rowsNumber">שורות: {lotteryRowsNumber} - </span><span className="lotteryTitleStyle lotteryTitle">הגרלת הלוטו</span></div>
+      <div className="headlineTitle"><span className="lotteryTitleStyle lotteryTitle">הגרלת הלוטו</span><span className="rowsNumber"> - שורות: {lotteryRowsNumber}</span></div>
       <div className="lotteryButtons">
         <button onClick={handleClick}>הגרל מספרים</button>
         <button onClick={increaseRowsNumber}>+</button>

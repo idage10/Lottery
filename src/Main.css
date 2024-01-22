@@ -9,13 +9,13 @@
 .rowsNumber {
   color: #223977;
   margin-left: 0.5em;
+  width: 5em;
 }
 .lotteryButtons {
   display: flex; /* center the div horizontally */
   align-items: center; /* center the div horizontally */
   justify-content: center; /* center the div horizontally */
   flex-direction: row; /* center the div horizontally */
-  direction: rtl;
 }
 .lotteryButtons button {
   background-color: #223977;
@@ -43,6 +43,7 @@
   flex-direction: row; /* center the rows horizontally */
   font-size: 25px;
   font-weight: 800;
+  margin-right: 0.5em;
 }
 .lotteryRows {
   display: flex; /* center the table horizontally */
@@ -54,7 +55,6 @@ td {
   background-color: #ececec;
 }
 .lotteryRows table {
-  direction: rtl;
   padding-top: 20px;
   font-size: 1.1em;
   font-weight: 800;
