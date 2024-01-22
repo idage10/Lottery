@@ -16,4 +16,6 @@
   width: 30px;
   height: 25px;
   display: inline-block;
+  display: grid;
+  place-items: center;
 }
