@@ -1,8 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
-import './Main.css';
-import { Main } from './Main';
+import './components/Main.css';
+import { Main } from './components/Main';
 import reportWebVitals from './reportWebVitals';
 import { HashRouter } from 'react-router-dom';
 

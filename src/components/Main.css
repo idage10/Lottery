@@ -1,7 +1,6 @@
-.mainDiv {
+.mainLotteryDiv {
   top: 90px;
   position: relative;
-  font-family: "Times New Roman";
 }
 .lotteryTitleStyle {
   margin-left: 0.3em;
@@ -73,8 +72,8 @@ td {
   margin: 0 3px;
   color: #fff;
   border-radius: 50%;
-  width: 1.5em;
-  height: 1.3em;
+  width: 1.8em;
+  height: 1.6em;
   display: inline-block;
   padding-top: 3px;
 }

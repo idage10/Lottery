@@ -70,7 +70,7 @@ export const Seven = () => {
   };
 
   return (
-    <div className="mainDiv">
+    <div className="mainLotteryDiv">
       <div className="headlineTitle"><span className="lotteryTitleStyle lotterySevenTitle">הגרלת 777</span><span className="rowsNumber"> - שורות: {lotteryRowsNumber}</span></div>
       <div className="lotteryButtons">
         <button onClick={handleClick}>הגרל מספרים</button>
