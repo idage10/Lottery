@@ -1,5 +1,5 @@
 .mainLotteryDiv {
-  top: 90px;
+  top: 25px;
   position: relative;
 }
 .headlineTitle {
@@ -9,7 +9,7 @@
   flex-direction: row; /* center the rows horizontally */
   font-size: 25px;
   font-weight: 800;
-  margin-right: 1.2em;
+  margin-right: 1em;
 }
 .lotteryRows {
   display: flex; /* center the table horizontally */
