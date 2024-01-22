@@ -69,10 +69,10 @@ td {
   width: 6em;
 }
 .lotteryRows .lotteryNumbersCircle {
-  margin: 0 2px;
+  margin-left: 4px;
   color: #fff;
   border-radius: 50%;
-  width: 1.9em;
-  height: 1.6em;
+  width: 30px;
+  height: 25px;
   display: inline-block;
 }

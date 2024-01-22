@@ -13,7 +13,7 @@
 .lotteryRows .strongNumberCircle {
   background-color: #99d4f0;
   border-radius: 50%;
-  width: 1.9em;
-  height: 1.6em;
+  width: 30px;
+  height: 25px;
   display: inline-block;
 }
