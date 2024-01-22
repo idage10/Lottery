@@ -13,9 +13,9 @@
 .lotteryRows .strongNumberCircle {
   background-color: #99d4f0;
   border-radius: 50%;
-  width: 30px;
-  height: 25px;
+  width: 1.8em;
+  height: 1.6em;
   display: inline-block;
-  display: grid;
+  line-height: 1.6em;
   place-items: center;
 }
