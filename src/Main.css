@@ -21,6 +21,7 @@
   background-color: rgba(34, 57, 119, 0.7);
 }
 .lotteryButtons button {
+  -webkit-tap-highlight-color: transparent;
   background-color: #223977;
   color: #fff;
   border-radius: 6px;
