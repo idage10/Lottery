@@ -1,12 +1,14 @@
 .lotterySevenTitle {
   color: #eb1e75;
 }
+
 .tdLotterySevenNumbers {
     width: 15em;
     display: flex;
     align-items: center;
     justify-content: center;
 }
+
 .lotteryRows .lotterySevenNumbersCircle {
   background-color: #eb1e75;
 }

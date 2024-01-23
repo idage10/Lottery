@@ -6,10 +6,11 @@ nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #0f172a;
+    background-image: linear-gradient(90deg, #0090d5, #223977);
     color: white;
     position: sticky;
     top: 0;
+    z-index: 999;
 }
 
 nav .title {
@@ -58,7 +59,6 @@ nav .menu span {
     background-color: #fff;
     border-radius: 0.2rem;
 }
-
 
 @media (max-width: 480px) {
     nav .menu {
