@@ -4,7 +4,6 @@
 
 nav {
     display: flex;
-    justify-content: space-between;
     align-items: center;
     background-image: linear-gradient(90deg, #0090d5, #223977);
     color: white;
@@ -19,10 +18,14 @@ nav .title {
     font-weight: bold;
     text-decoration: none;
     color: white;
+    width: 100%;
+    text-align: center;
 }
 
 nav ul {
     display: flex;
+    left: 0;
+    position: absolute;
 }
 
 nav ul li {
@@ -75,6 +78,7 @@ nav .menu span {
         flex-direction: column;
         width: 100%;
         margin-bottom: 0.25rem;
+        position: relative;
     }
 
     nav ul.open {
