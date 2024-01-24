@@ -23,7 +23,8 @@ export const Navbar = () => {
             <ul className={`${menuOpen ? "open" : ""} ${toggled ? "toggled" : ""}`}>
                 <li>
                     <NavLink 
-                        to="/lotto" 
+                        to="/lotto"
+                        className="lottoNav"
                         onClick={() => {
                             setMenuOpen(!menuOpen);
                         }}
@@ -34,6 +35,7 @@ export const Navbar = () => {
                 <li>
                     <NavLink 
                         to="/777"
+                        className="sevenNav"
                         onClick={() => {
                             setMenuOpen(!menuOpen);
                         }}
