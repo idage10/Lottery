@@ -52,6 +52,7 @@
   padding-right: 8px;
   font-size: 1.2em;
   margin-left: 15px;
+  cursor: pointer;
 }
 
 .lotteryButtons button:hover {
