@@ -4,6 +4,7 @@ import "./Navbar.css";
 
 export const Navbar = () => {
     const [menuOpen, setMenuOpen] = useState(false);
+    const [toggled, setToggled] = useState(false);
     
     return (
         <nav>
@@ -12,18 +13,33 @@ export const Navbar = () => {
                 className="menu" 
                 onClick={() => {
                     setMenuOpen(!menuOpen);
+                    setToggled(true);
                 }}
             >
                 <span></span>
                 <span></span>
                 <span></span>
             </div>
-            <ul className={menuOpen ? "open" : ""}>
+            <ul className={`${menuOpen ? "open" : ""} ${toggled ? "toggled" : ""}`}>
                 <li>
-                    <NavLink to="/lotto">לוטו</NavLink>
+                    <NavLink 
+                        to="/lotto" 
+                        onClick={() => {
+                            setMenuOpen(!menuOpen);
+                        }}
+                    >
+                        לוטו
+                    </NavLink>
                 </li>
                 <li>
-                    <NavLink to="/777">777</NavLink>
+                    <NavLink 
+                        to="/777"
+                        onClick={() => {
+                            setMenuOpen(!menuOpen);
+                        }}
+                    >
+                        777
+                    </NavLink>
                 </li>
             </ul>
         </nav>
