@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Link, NavLink } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import "./Navbar.css";
 
 export const Navbar = () => {
@@ -8,7 +8,7 @@ export const Navbar = () => {
     
     return (
         <nav>
-            <Link to="/lotto" className="title">מפעל הפיס</Link>
+            <span className="title">מפעל הפיס</span>
             <div 
                 className="menu" 
                 onClick={() => {

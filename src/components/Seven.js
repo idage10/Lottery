@@ -79,32 +79,37 @@ export const Seven = () => {
         <button onClick={resetRowsNumber}>אפס</button>
       </div>
       <div className="lotteryRows">
-        {lotteryRows.length > 0 ? ( // Check if the lotteryRows array is not empty
-          <table>
-            <tr>
-              <th className="tdRowNumber">שורה</th>
-              <th className="tdLotterySevenNumbers">מספרים שהוגרלו</th>
-            </tr>
-              {
-                lotteryRows.map((lotteryRow, index) => (
-                  <tr>
-                    <td className="tdRowNumber">{index + 1}</td>
-                    <td className="tdLotterySevenNumbers">
-                      <span className="lotteryNumbersCircle lotterySevenNumbersCircle">{lotteryRow.number1}</span>
-                      <span className="lotteryNumbersCircle lotterySevenNumbersCircle">{lotteryRow.number2}</span>
-                      <span className="lotteryNumbersCircle lotterySevenNumbersCircle">{lotteryRow.number3}</span>
-                      <span className="lotteryNumbersCircle lotterySevenNumbersCircle">{lotteryRow.number4}</span>
-                      <span className="lotteryNumbersCircle lotterySevenNumbersCircle">{lotteryRow.number5}</span>
-                      <span className="lotteryNumbersCircle lotterySevenNumbersCircle">{lotteryRow.number6}</span>
-                      <span className="lotteryNumbersCircle lotterySevenNumbersCircle">{lotteryRow.number7}</span>
-                    </td>
-                  </tr>
-                ))
-              }
-          </table>
-        ) : ( // If the lotteryRows array is empty, render nothing
-          null
-        )}
+        {
+          lotteryRows.length > 0 ? ( // Check if the lotteryRows array is not empty
+            <table>
+              <thead>
+                <tr>
+                  <th className="tdRowNumber">שורה</th>
+                  <th className="tdLotterySevenNumbers">מספרים שהוגרלו</th>
+                </tr>
+              </thead>
+              <tbody>
+                {
+                  lotteryRows.map((lotteryRow, index) => (
+                    <tr key={index}>
+                      <td className="tdRowNumber">{index + 1}</td>
+                      <td className="tdLotterySevenNumbers">
+                        <span className="lotteryNumbersCircle lotterySevenNumbersCircle">{lotteryRow.number1}</span>
+                        <span className="lotteryNumbersCircle lotterySevenNumbersCircle">{lotteryRow.number2}</span>
+                        <span className="lotteryNumbersCircle lotterySevenNumbersCircle">{lotteryRow.number3}</span>
+                        <span className="lotteryNumbersCircle lotterySevenNumbersCircle">{lotteryRow.number4}</span>
+                        <span className="lotteryNumbersCircle lotterySevenNumbersCircle">{lotteryRow.number5}</span>
+                        <span className="lotteryNumbersCircle lotterySevenNumbersCircle">{lotteryRow.number6}</span>
+                        <span className="lotteryNumbersCircle lotterySevenNumbersCircle">{lotteryRow.number7}</span>
+                      </td>
+                    </tr>
+                  ))
+                }
+              </tbody>
+            </table>
+          ) : ( // If the lotteryRows array is empty, render nothing
+            null
+          )}
       </div>
     </div>
   );
