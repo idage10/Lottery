@@ -71,6 +71,7 @@ nav .menu {
 @media (max-width: 480px) {
     nav .menu {
         display: inline-block;
+        outline: none;
     }
 
     nav {
