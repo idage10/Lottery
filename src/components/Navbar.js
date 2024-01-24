@@ -22,15 +22,13 @@ export const Navbar = () => {
         <nav>
             <span className="title">מפעל הפיס</span>
             <div 
-                className="menu" 
+                className="menu"
                 onClick={() => {
                     setMenuOpen(!menuOpen);
                     setToggled(true);
                 }}
             >
-                <span></span>
-                <span></span>
-                <span></span>
+                <img alt="" className="menuIcon" src={process.env.PUBLIC_URL + (menuOpen ? "/close-menu-icon.png" : "/menu-icon.png")} />
             </div>
             <ul className={`${menuOpen ? "open" : ""} ${toggled ? "toggled" : ""}`}>
                 <li>

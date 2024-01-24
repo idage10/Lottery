@@ -58,25 +58,19 @@ nav ul li a {
 nav .menu {
     display: none;
     position: absolute;
-    top: 0.9rem;
     right: 0.5rem;
-    flex-direction: column;
-    justify-content: space-between;
-    width: 2.25rem;
-    height: 2rem;
+    width: 4rem;
     cursor: pointer;
 }
 
-nav .menu span {
-    height: 0.4rem;
-    width: 100%;
-    background-color: #fff;
-    border-radius: 0.2rem;
+.menuIcon {
+    bottom: 0.1rem;
+    position: relative;
 }
 
 @media (max-width: 480px) {
     nav .menu {
-        display: flex;
+        display: inline-block;
     }
 
     nav {
