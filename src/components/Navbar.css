@@ -98,7 +98,7 @@ nav .menu span {
         animation-fill-mode: forwards;
     }
 
-    nav ul.open {
+    nav ul.open.toggled {
         visibility: visible;
         transform: scaleY(1);
         transition: transform 1s;
