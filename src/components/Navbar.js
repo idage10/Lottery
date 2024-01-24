@@ -38,7 +38,10 @@ export const Navbar = () => {
                         to="/lotto"
                         className="lottoNav"
                         onClick={() => {
-                            setMenuOpen(!menuOpen);
+                            if (isMobileScreen)
+                            {
+                                setMenuOpen(!menuOpen);
+                            }
                         }}
                     >
                         לוטו
@@ -49,7 +52,10 @@ export const Navbar = () => {
                         to="/777"
                         className="sevenNav"
                         onClick={() => {
-                            setMenuOpen(!menuOpen);
+                            if (isMobileScreen)
+                            {
+                                setMenuOpen(!menuOpen);
+                            }
                         }}
                     >
                         777
