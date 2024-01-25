@@ -75,6 +75,10 @@ nav .menu {
 }
 
 @media (max-width: 480px) {
+    nav .title {
+        margin-top: 0.7rem;
+    }
+    
     nav .menu {
         display: inline-block;
         outline: none;
