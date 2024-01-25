@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "./Lottery.css";
+import "./LotteryLotto.css";
 
 // A custom hook to generate a random number in a given range
 const getRandomNumber = (min, max, currentRow) => {
@@ -22,7 +22,7 @@ const getRandomNumber = (min, max, currentRow) => {
 };
 
 // A functional component to display the lottery button and numbers
-export const Lottery = () => {
+export const LotteryLotto = () => {
   // Use the custom hook to generate lotteryRowsNumber button
   const [lotteryRowsNumber, setLotteryRowsNumber] = useState(1);
   // Use the custom hook to generate lottery rows list
