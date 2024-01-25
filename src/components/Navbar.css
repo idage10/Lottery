@@ -58,20 +58,41 @@ nav ul li a {
 nav .menu {
     display: none;
     position: absolute;
-    right: 0.5rem;
+    top: -0.1rem;
+    right: 0rem;
+    height: 5rem;
     width: 4rem;
     cursor: pointer;
-}
-
-.menuIcon {
-    bottom: 0.1rem;
-    position: relative;
 }
 
 @media (max-width: 480px) {
     nav .menu {
         display: inline-block;
         outline: none;
+    }
+
+    /* Prevents blue highlight on the menu div on click on the image*/
+    .menu {
+        -webkit-tap-highlight-color: transparent;
+        -webkit-touch-callout: none;
+        -webkit-user-select: none;
+        -khtml-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+    }
+
+    /* Prevents blue highlight on the menu div on click on the image*/
+    .menu:focus {
+        outline: none !important;
+    }
+    
+    .defaultMenuIcon {
+        background-image: url("../../public/images/menu-icon.png");
+    }
+    
+    .closeMenuIcon {
+        background-image: url("../../public/images/close-menu-icon.png");
     }
 
     nav {
@@ -132,20 +153,20 @@ nav .menu {
     }
 
     @keyframes slideDownUl {
-        from {
-          max-height: 0;
-        }
-        to {
-          max-height: 200px;
-        }
+      from {
+        max-height: 0;
       }
-      
-      @keyframes slideUpUl {
-        from {
-          max-height: 200px;
-        }
-        to {
-          max-height: 0;
-        }
+      to {
+        max-height: 200px;
       }
+    }
+    
+    @keyframes slideUpUl {
+      from {
+        max-height: 200px;
+      }
+      to {
+        max-height: 0;
+      }
+    }
 }
