@@ -27,10 +27,18 @@ nav {
 
 nav .title {
     font-size: 1.5rem;
-    margin: 1rem;
     font-weight: bold;
     text-decoration: none;
     color: white;
+    display: flex;
+    align-items: center;
+    margin: 0.5rem;
+}
+
+nav .title .paisLogo {
+    height: 40px;
+    width: 45px;
+    margin-left: 0.2rem
 }
 
 nav ul {

@@ -20,7 +20,10 @@ export const Navbar = () => {
     
     return (
         <nav>
-            <span className="title">מפעל הפיס</span>
+            <span className="title">
+                <img className="paisLogo" src={`${process.env.PUBLIC_URL}/images/pais-logo.png`} alt="לוגו מפעל הפיס"></img>
+                מפעל הפיס
+            </span>
             <div 
                 className={`menu ${menuOpen ? "closeMenuIcon" : "defaultMenuIcon"}`}
                 onClick={() => {
