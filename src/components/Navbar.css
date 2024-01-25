@@ -1,4 +1,4 @@
-nav ul li a.active.lottoNav {
+nav ul li a.lottoNav.active {
     background-color: #e31d1a;
 }
 
@@ -6,7 +6,7 @@ nav ul li a:not(.active):hover.lottoNav {
     background-color:#e31d1a ;
 }
 
-nav ul li a.active.sevenNav {
+nav ul li a.sevenNav.active {
     background-color: #eb1e75;
 }
 
