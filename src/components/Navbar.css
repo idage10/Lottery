@@ -41,12 +41,12 @@ nav .navigationTitle .paisLogo {
     margin-left: 0.4rem;
 }
 
-nav .navButtons .navLoggoLotto, nav .navButtons .navLoggo777 {
+nav .navMenuButtons .navLoggoLotto, nav .navMenuButtons .navLoggo777 {
     height: 30px;
     width: 70px;
 }
 
-nav .navButtons .navLoggoLotto
+nav .navMenuButtons .navLoggoLotto
 {
     padding-top: 3px;
 }
