@@ -32,7 +32,7 @@ export const Navbar = () => {
                 }}
             >
             </div>
-            <ul className={`navButtons ${menuOpen ? "open" : ""} ${toggled ? "toggled" : ""}`}>
+            <ul className={`navMenuButtons ${menuOpen ? "open" : ""} ${toggled ? "toggled" : ""}`}>
                 <li>
                     <NavLink 
                         to="/lotto"
