@@ -71,12 +71,17 @@ export const Lottery777 = () => {
 
   return (
     <div className="mainLotteryDiv">
-      <div className="headlineTitle"><span className="lotteryTitleStyle lotterySevenTitle">הגרלת 777</span><span className="rowsNumber"> - שורות: {lotteryRowsNumber}</span></div>
+      <div className="headlineTitle">
+        <span className="lotteryTitleStyle lotterySevenTitle"> 
+        <img className="logo777" src={`${process.env.PUBLIC_URL}/images/777-logo.png`} alt="לוגו 777"></img>
+        </span>
+        <span className="rowsNumber"> - שורות: {lotteryRowsNumber}</span>
+      </div>
       <div className="lotteryButtons">
         <button onClick={handleClick}>הגרל מספרים</button>
         <button onClick={increaseRowsNumber}>+</button>
         <button onClick={decreaseRowsNumber}>-</button>
-        <button onClick={resetRowsNumber}>אפס</button>
+        <button onClick={resetRowsNumber}>איפוס</button>
       </div>
       <div className="lotteryRows">
         {

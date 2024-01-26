@@ -2,6 +2,11 @@
   color: #eb1e75;
 }
 
+.headlineTitle .lotteryTitleStyle .logo777 {
+  height: 45px;
+  width: 120px;
+}
+
 .tdLotterySevenNumbers {
     width: 15em;
     display: flex;

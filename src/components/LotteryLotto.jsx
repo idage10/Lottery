@@ -71,12 +71,17 @@ export const LotteryLotto = () => {
 
   return (
     <div className="mainLotteryDiv">
-      <div className="headlineTitle"><span className="lotteryTitleStyle lotteryTitle">הגרלת הלוטו</span><span className="rowsNumber"> - שורות: {lotteryRowsNumber}</span></div>
+      <div className="headlineTitle">
+        <span className="lotteryTitleStyle lotteryTitle">
+          <img className="logoLotto" src={`${process.env.PUBLIC_URL}/images/lotto-logo.png`} alt="לוגו לוטו"></img>
+        </span>
+        <span className="rowsNumber"> - שורות: {lotteryRowsNumber}</span>
+      </div>
       <div className="lotteryButtons">
         <button onClick={handleClick}>הגרל מספרים</button>
         <button onClick={increaseRowsNumber}>+</button>
         <button onClick={decreaseRowsNumber}>-</button>
-        <button onClick={resetRowsNumber}>אפס</button>
+        <button onClick={resetRowsNumber}>איפוס</button>
       </div>
       <div className="lotteryRows">
         {
