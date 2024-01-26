@@ -71,9 +71,9 @@ export const Lottery777 = () => {
 
   return (
     <div className="mainLotteryDiv">
-      <div className="headlineTitle">
+      <div className="mainPageTitle">
         <span className="lotteryTitleStyle lotterySevenTitle"> 
-        <img className="logo777" src={`${process.env.PUBLIC_URL}/images/777-logo.png`} alt="לוגו 777"></img>
+        <img className="mainPageTitleLogo777" src={`${process.env.PUBLIC_URL}/images/777-logo.png`} alt="לוגו 777"></img>
         </span>
         <span className="rowsNumber"> - שורות: {lotteryRowsNumber}</span>
       </div>

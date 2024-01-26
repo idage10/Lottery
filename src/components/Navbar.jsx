@@ -20,7 +20,7 @@ export const Navbar = () => {
     
     return (
         <nav>
-            <span className="title">
+            <span className="navigationTitle">
                 <img className="paisLogo" src={`${process.env.PUBLIC_URL}/images/pais-logo.png`} alt="לוגו מפעל הפיס"></img>
                 מפעל הפיס
             </span>
@@ -32,7 +32,7 @@ export const Navbar = () => {
                 }}
             >
             </div>
-            <ul className={`${menuOpen ? "open" : ""} ${toggled ? "toggled" : ""}`}>
+            <ul className={`navButtons ${menuOpen ? "open" : ""} ${toggled ? "toggled" : ""}`}>
                 <li>
                     <NavLink 
                         to="/lotto"
@@ -44,7 +44,7 @@ export const Navbar = () => {
                             }
                         }}
                     >
-                        לוטו
+                        <img className="navLoggoLotto" src={`${process.env.PUBLIC_URL}/images/lotto-logo.png`} alt="לוגו לוטו"></img>
                     </NavLink>
                 </li>
                 <li>
@@ -58,7 +58,7 @@ export const Navbar = () => {
                             }
                         }}
                     >
-                        777
+                        <img className="navLoggo777" src={`${process.env.PUBLIC_URL}/images/777-logo.png`} alt="לוגו 777"></img>
                     </NavLink>
                 </li>
             </ul>

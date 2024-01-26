@@ -71,9 +71,9 @@ export const LotteryLotto = () => {
 
   return (
     <div className="mainLotteryDiv">
-      <div className="headlineTitle">
+      <div className="mainPageTitle">
         <span className="lotteryTitleStyle lotteryTitle">
-          <img className="logoLotto" src={`${process.env.PUBLIC_URL}/images/lotto-logo.png`} alt="לוגו לוטו"></img>
+          <img className="mainPageTitleLogoLotto" src={`${process.env.PUBLIC_URL}/images/lotto-logo.png`} alt="לוגו לוטו"></img>
         </span>
         <span className="rowsNumber"> - שורות: {lotteryRowsNumber}</span>
       </div>

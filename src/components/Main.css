@@ -8,7 +8,7 @@
   position: relative;
 }
 
-.headlineTitle {
+.mainPageTitle {
   display: flex; /* center the rows horizontally */
   align-items: center; /* center the rows horizontally */
   justify-content: center; /* center the rows horizontally */

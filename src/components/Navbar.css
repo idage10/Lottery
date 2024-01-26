@@ -25,7 +25,7 @@ nav {
     z-index: 999;
 }
 
-nav .title {
+nav .navigationTitle {
     font-size: 1.5rem;
     font-weight: bold;
     text-decoration: none;
@@ -35,10 +35,20 @@ nav .title {
     margin: 0.5rem;
 }
 
-nav .title .paisLogo {
+nav .navigationTitle .paisLogo {
     height: 45px;
     width: 45px;
     margin-left: 0.4rem;
+}
+
+nav .navButtons .navLoggoLotto, nav .navButtons .navLoggo777 {
+    height: 30px;
+    width: 70px;
+}
+
+nav .navButtons .navLoggoLotto
+{
+    padding-top: 3px;
 }
 
 nav ul {
@@ -56,7 +66,7 @@ nav ul li a {
     display: block;
     text-decoration: none;
     color: white;
-    padding: 0.5rem;
+    padding: 0.2rem;
     margin: 0 0.5rem;
     border-radius: 0.5rem;
     padding-left: 1.8rem;
@@ -75,7 +85,7 @@ nav .menu {
 }
 
 @media (max-width: 480px) {
-    nav .title {
+    nav .navigationTitle {
         margin-top: 0.5rem;
     }
     
@@ -163,7 +173,6 @@ nav .menu {
     }
 
     nav ul li a {
-        padding: 0.5rem;
         margin: 0rem 0.5rem;
     }
 
