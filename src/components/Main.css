@@ -1,11 +1,12 @@
-.mainDiv {
+#root, .mainDiv {
   height: 100%;
   width: 100%;
 }
 
 .mainLotteryDiv {
-  top: 25px;
+  margin-top: 25px;
   position: relative;
+  height: calc(100% - 7rem - 25px); /* view height calculation is (100% of the window - nav height - 25px of .mainLotteryDiv margin-top) */
 }
 
 .mainPageTitle {
@@ -61,9 +62,16 @@
   flex-direction: column; /* center the table horizontally */
 }
 
-@media only screen and (max-width: 800px) {
+
+@media only screen and (max-width: 800px) { /* resolution for mobile and tablets*/
   .lotteryButtons button:hover {
     background-color: #223977;
+  }
+}
+
+@media only screen and (max-width: 480px) { /* mobile resolution */
+  .mainLotteryDiv {
+    height: calc(100% - 3.8rem - 25px); /* view height calculation is (100% of the window - nav height - 25px of .mainLotteryDiv margin-top) */
   }
 }
 

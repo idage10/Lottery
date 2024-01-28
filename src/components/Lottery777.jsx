@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import useMediaQuery from '@mui/material/useMediaQuery';
 import "./Lottery777.css";
 
 // A custom hook to generate a random number in a given range
@@ -22,11 +23,14 @@ const getRandomNumber = (min, max, currentRow) => {
 };
 
 // A functional component to display the lottery button and numbers
-export const Lottery777 = () => {
+export const Lottery777 = (props) => {
+  const { setClickOnMobileMainPage } = props;
   // Use the custom hook to generate lotteryRowsNumber button
   const [lotteryRowsNumber, setLotteryRowsNumber] = useState(1);
   // Use the custom hook to generate lottery rows list
   const [lotteryRows, setLotteryRows] = useState([]);
+  // use the hook to check the screen size
+  const isMobileScreen = useMediaQuery("(max-width: 480px)");
 
   // A function to handle the button click
   const handleClick = () => {
@@ -69,8 +73,14 @@ export const Lottery777 = () => {
     setLotteryRows([]);
   };
 
+  const mainLotteryDivOnClick = () => {
+    if (isMobileScreen) {
+      setClickOnMobileMainPage(true);
+    }
+  }
+
   return (
-    <div className="mainLotteryDiv">
+    <div className="mainLotteryDiv" onClick={mainLotteryDivOnClick}>
       <div className="mainPageTitle">
         <span className="lotteryTitleStyle lotterySevenTitle"> 
         <img className="mainPageTitleLogo777" src={`${process.env.PUBLIC_URL}/images/777-logo.png`} alt="לוגו 777"></img>

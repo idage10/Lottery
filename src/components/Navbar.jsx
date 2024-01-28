@@ -3,7 +3,8 @@ import { NavLink } from "react-router-dom";
 import useMediaQuery from '@mui/material/useMediaQuery';
 import "./Navbar.css";
 
-export const Navbar = () => {
+export const Navbar = (props) => {
+    const { isClickOnMobileMainPage, setClickOnMobileMainPage } = props;
     const [menuOpen, setMenuOpen] = useState(false);
     const [toggled, setToggled] = useState(false);
 
@@ -13,10 +14,19 @@ export const Navbar = () => {
     React.useEffect(() => {
         if (isMobileScreen) {
             // set menuOpen and toggled to false if the screen is mobile screen
-            setMenuOpen(false);            
+            setMenuOpen(false);          
             setToggled(false);
         }
     }, [isMobileScreen]); // update the effect when the screen size changes
+
+    React.useEffect(() => {
+        if (isMobileScreen && menuOpen && isClickOnMobileMainPage) {
+            // close the nav menu when clicking the main page on mobile resolution
+            setMenuOpen(false);
+        }
+        // set isClickOnMobileMainPage to false after clicking on the main page
+        setClickOnMobileMainPage(false);
+    }, [isMobileScreen, menuOpen, isClickOnMobileMainPage, setClickOnMobileMainPage]); // update the effect when a varible changes
     
     return (
         <nav>

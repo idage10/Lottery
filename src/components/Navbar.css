@@ -76,7 +76,7 @@ nav ul li a {
 nav .menu {
     display: none;
     position: absolute;
-    top: 0.8rem;
+    top: 0.7rem;
     right: 0.5rem;
     width: 40px;
     height: 40px;
@@ -84,7 +84,7 @@ nav .menu {
     cursor: pointer;
 }
 
-@media (max-width: 480px) {
+@media (max-width: 480px) { /* mobile resolution */
     nav .navigationTitle {
         margin-top: 0.5rem;
     }
