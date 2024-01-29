@@ -12,6 +12,7 @@ export const Main = () => {
     titleName: "מפעל הפיס", alt: "לוגו מפעל הפיס", className: "paisLogo",
     src: `${process.env.PUBLIC_URL}/images/pais-logo.png`
   };
+  
   const navBarMenuButtonsData = [{
     navLinkTo: "/lotto", navLinkClassName: "lottoNav", imgClassName: "navLoggoLotto",
     imgSrc: `${process.env.PUBLIC_URL}/images/lotto-logo.png`, imgAlt: "לוגו לוטו"

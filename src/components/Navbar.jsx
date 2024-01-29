@@ -9,7 +9,6 @@ export const Navbar = (props) => {
     const [menuOpen, setMenuOpen] = useState(false);
     // hide the menu buttons on first time the app is in mobile resolution, to prevent watching the close menu animation
     const [isShowMenuAnimation, setShowMenuAnimation] = useState(false);
-    const [menuButtonsData, setMenuButtonsData] = useState([]);
 
     // use the hook to check the screen size
     const isMobileScreen = useMediaQuery("(max-width: 480px)");
@@ -30,10 +29,6 @@ export const Navbar = (props) => {
         // set isClickOnMobileMainPage to false after clicking on the main page
         setClickOnMobileMainPage(false);
     }, [isMobileScreen, menuOpen, isClickOnMobileMainPage, setClickOnMobileMainPage]); // update the effect when a varible changes
-
-    React.useEffect(() => {
-        setMenuButtonsData(navBarMenuButtonsData);
-    }, [navBarMenuButtonsData]); // update the effect when navBarMenuButtonsData changes
     
     const onClickMenuIcon = () => {
         setMenuOpen(!menuOpen);
@@ -60,7 +55,7 @@ export const Navbar = (props) => {
             </div>
             <ul className={`navMenuButtons ${menuOpen ? "open" : ""} ${isShowMenuAnimation ? "showMenuAnimation" : ""}`}>
                 {
-                    menuButtonsData.map((buttonData, index) => (
+                    navBarMenuButtonsData.map((buttonData, index) => (
                         <li>
                             <NavLink 
                                 to={buttonData?.navLinkTo}
