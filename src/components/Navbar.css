@@ -130,10 +130,11 @@ nav .menu {
         background-image: linear-gradient(90deg, #0090d5, #223977);
         transform: scaleY(0);
         transform-origin: top;
-        transition: transform 1s;
+        transition: transform 0s;
+        max-height: 0;
     }
 
-    nav ul.toggled {
+    nav ul.showMenuAnimation {
         visibility: visible;
         display: flex;
         flex-direction: column;
@@ -146,7 +147,7 @@ nav .menu {
         animation-fill-mode: forwards;
     }
 
-    nav ul.open.toggled {
+    nav ul.showMenuAnimation.open {
         visibility: visible;
         padding-bottom: 0.25rem;
         transform: scaleY(1);

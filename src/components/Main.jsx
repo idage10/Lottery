@@ -6,16 +6,32 @@ import { useState } from 'react';
 
 // A functional component to display the Main Page
 export const Main = () => {
-    const [isClickOnMobileMainPage, setClickOnMobileMainPage] = useState(false);
-
-    return (
-      <div className='mainDiv'>
-        <Navbar isClickOnMobileMainPage={isClickOnMobileMainPage} setClickOnMobileMainPage={setClickOnMobileMainPage} />
-        <Routes>
-          <Route path="*" element={<Navigate to="/lotto" replace />} />
-          <Route path="/lotto" element={<LotteryLotto setClickOnMobileMainPage={setClickOnMobileMainPage} />} />
-          <Route path="/777" element={<Lottery777 setClickOnMobileMainPage={setClickOnMobileMainPage} />} />
-        </Routes>
-      </div>
-    );
+  const [isClickOnMobileMainPage, setClickOnMobileMainPage] = useState(false);
+  
+  const navBarTitleData = {
+    titleName: "מפעל הפיס", alt: "לוגו מפעל הפיס", className: "paisLogo",
+    src: `${process.env.PUBLIC_URL}/images/pais-logo.png`
   };
+  const navBarMenuButtonsData = [{
+    navLinkTo: "/lotto", navLinkClassName: "lottoNav", imgClassName: "navLoggoLotto",
+    imgSrc: `${process.env.PUBLIC_URL}/images/lotto-logo.png`, imgAlt: "לוגו לוטו"
+  },
+  {
+    navLinkTo: "/777", navLinkClassName: "sevenNav", imgClassName: "navLoggo777",
+    imgSrc: `${process.env.PUBLIC_URL}/images/777-logo.png`, imgAlt: "לוגו 777"
+  }];
+
+  return (
+    <div className='mainDiv'>
+      <Navbar isClickOnMobileMainPage={isClickOnMobileMainPage} setClickOnMobileMainPage={setClickOnMobileMainPage} 
+        navBarTitleData={navBarTitleData} navBarMenuButtonsData={navBarMenuButtonsData}
+      >
+      </Navbar>
+      <Routes>
+        <Route path="*" element={<Navigate to="/lotto" replace />} />
+        <Route path="/lotto" element={<LotteryLotto setClickOnMobileMainPage={setClickOnMobileMainPage} />} />
+        <Route path="/777" element={<Lottery777 setClickOnMobileMainPage={setClickOnMobileMainPage} />} />
+      </Routes>
+    </div>
+  );
+};

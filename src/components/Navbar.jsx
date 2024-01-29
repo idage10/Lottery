@@ -4,18 +4,21 @@ import useMediaQuery from '@mui/material/useMediaQuery';
 import "./Navbar.css";
 
 export const Navbar = (props) => {
-    const { isClickOnMobileMainPage, setClickOnMobileMainPage } = props;
+    const { isClickOnMobileMainPage, setClickOnMobileMainPage, navBarTitleData, navBarMenuButtonsData } = props;
+    // open/close the menu on mobile resolution
     const [menuOpen, setMenuOpen] = useState(false);
-    const [toggled, setToggled] = useState(false);
+    // hide the menu buttons on first time the app is in mobile resolution, to prevent watching the close menu animation
+    const [isShowMenuAnimation, setShowMenuAnimation] = useState(false);
+    const [menuButtonsData, setMenuButtonsData] = useState([]);
 
     // use the hook to check the screen size
     const isMobileScreen = useMediaQuery("(max-width: 480px)");
 
     React.useEffect(() => {
         if (isMobileScreen) {
-            // set menuOpen and toggled to false if the screen is mobile screen
+            // set menuOpen and isShowMenuAnimation to false if the screen is mobile screen
             setMenuOpen(false);          
-            setToggled(false);
+            setShowMenuAnimation(false);
         }
     }, [isMobileScreen]); // update the effect when the screen size changes
 
@@ -27,50 +30,48 @@ export const Navbar = (props) => {
         // set isClickOnMobileMainPage to false after clicking on the main page
         setClickOnMobileMainPage(false);
     }, [isMobileScreen, menuOpen, isClickOnMobileMainPage, setClickOnMobileMainPage]); // update the effect when a varible changes
+
+    React.useEffect(() => {
+        setMenuButtonsData(navBarMenuButtonsData);
+    }, [navBarMenuButtonsData]); // update the effect when navBarMenuButtonsData changes
     
+    const onClickMenuIcon = () => {
+        setMenuOpen(!menuOpen);
+        setShowMenuAnimation(true);
+    }
+
+    const onClickNavLink = () => {
+        if (isMobileScreen)
+        {
+            setMenuOpen(!menuOpen);
+        }
+    }
+
     return (
         <nav>
             <span className="navigationTitle">
-                <img className="paisLogo" src={`${process.env.PUBLIC_URL}/images/pais-logo.png`} alt="לוגו מפעל הפיס"></img>
-                מפעל הפיס
+                <img className={navBarTitleData?.className} src={navBarTitleData?.src} alt={navBarTitleData?.alt}></img>
+                {navBarTitleData?.titleName}
             </span>
             <div 
                 className={`menu ${menuOpen ? "closeMenuIcon" : "defaultMenuIcon"}`}
-                onClick={() => {
-                    setMenuOpen(!menuOpen);
-                    setToggled(true);
-                }}
+                onClick={onClickMenuIcon}
             >
             </div>
-            <ul className={`navMenuButtons ${menuOpen ? "open" : ""} ${toggled ? "toggled" : ""}`}>
-                <li>
-                    <NavLink 
-                        to="/lotto"
-                        className="lottoNav"
-                        onClick={() => {
-                            if (isMobileScreen)
-                            {
-                                setMenuOpen(!menuOpen);
-                            }
-                        }}
-                    >
-                        <img className="navLoggoLotto" src={`${process.env.PUBLIC_URL}/images/lotto-logo.png`} alt="לוגו לוטו"></img>
-                    </NavLink>
-                </li>
-                <li>
-                    <NavLink 
-                        to="/777"
-                        className="sevenNav"
-                        onClick={() => {
-                            if (isMobileScreen)
-                            {
-                                setMenuOpen(!menuOpen);
-                            }
-                        }}
-                    >
-                        <img className="navLoggo777" src={`${process.env.PUBLIC_URL}/images/777-logo.png`} alt="לוגו 777"></img>
-                    </NavLink>
-                </li>
+            <ul className={`navMenuButtons ${menuOpen ? "open" : ""} ${isShowMenuAnimation ? "showMenuAnimation" : ""}`}>
+                {
+                    menuButtonsData.map((buttonData, index) => (
+                        <li>
+                            <NavLink 
+                                to={buttonData?.navLinkTo}
+                                className={buttonData?.navLinkClassName}
+                                onClick={onClickNavLink}
+                            >
+                                <img className={buttonData?.imgClassName} src={buttonData?.imgSrc} alt={buttonData?.imgAlt}></img>
+                            </NavLink>
+                        </li>
+                    ))
+                }
             </ul>
         </nav>
     );

@@ -73,14 +73,14 @@ export const LotteryLotto = (props) => {
     setLotteryRows([]);
   };
 
-  const mainLotteryDivOnClick = () => {
+  const onClickMainLotteryDiv = () => {
     if (isMobileScreen) {
       setClickOnMobileMainPage(true);
     }
   }
 
   return (
-    <div className="mainLotteryDiv" onClick={mainLotteryDivOnClick}>
+    <div className="mainLotteryDiv" onClick={onClickMainLotteryDiv}>
       <div className="mainPageTitle">
         <span className="lotteryTitleStyle lotteryTitle">
           <img className="mainPageTitleLogoLotto" src={`${process.env.PUBLIC_URL}/images/lotto-logo.png`} alt="לוגו לוטו"></img>
