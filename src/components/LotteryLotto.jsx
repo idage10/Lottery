@@ -146,7 +146,7 @@ export const LotteryLotto = (props) => {
       <div className="lotteryRows">
         {
           lotteryRows.length > 0 ? ( // check if the lotteryRows array is not empty
-            <table>
+            <table className="lotteryTable">
               <thead>
                 <tr>
                   <th className="tdRowNumber">שורה</th>
