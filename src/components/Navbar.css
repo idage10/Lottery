@@ -20,7 +20,7 @@ nav {
     align-items: center;
     background-image: linear-gradient(90deg, #0090d5, #223977);
     color: white;
-    position: sticky;
+    position: relative;
     top: 0;
     z-index: 999;
 }
