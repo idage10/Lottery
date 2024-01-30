@@ -24,20 +24,59 @@ const getRandomNumber = (min, max, currentRow) => {
 
 // A functional component to display the lottery button and numbers
 export const LotteryLotto = (props) => {
-  const { setClickOnMobileMainPage } = props;
+  const { setClickOnMobileMainPage, isFirstPageRefreshLotto, setFirstPageRefreshLotto } = props;
   // Use the custom hook to generate lotteryRowsNumber button
   const [lotteryRowsNumber, setLotteryRowsNumber] = useState(1);
   // Use the custom hook to generate lottery rows list
   const [lotteryRows, setLotteryRows] = useState([]);
   // use the hook to check the screen size
   const isMobileScreen = useMediaQuery("(max-width: 480px)");
+  const sessionStorageKeyName = "lastLottoTableData";
 
-  // A function to handle the button click
+  React.useEffect(() => {
+    // define an async function
+    const handleSessionStorageData = async () => {
+      const lotteryTableDataJSON = sessionStorage.getItem(sessionStorageKeyName);
+  
+      if (isFirstPageRefreshLotto) {
+        // clear the session storage data
+        await clearSessionStorage();
+        // update the state after clearing the sessionStorage
+        setFirstPageRefreshLotto(false);
+      }
+      else if (lotteryTableDataJSON != null)
+      {
+        const lotteryTableData = JSON.parse(lotteryTableDataJSON);
+        setLotteryRows(lotteryTableData);
+      }
+    }
+  
+    // call the async function
+    handleSessionStorageData();
+  }, [isFirstPageRefreshLotto, setFirstPageRefreshLotto]);
+
+  // an async function that clears the sessionStorage
+  async function clearSessionStorage () {
+    // try to clear the sessionStorage
+    try {
+      sessionStorage.clear();
+    } catch (error) {
+      // throw the error
+      throw error;
+    }
+  }
+
+  // a function to handle the button click
   const handleClick = () => {
+    // reset last lotto table data
+    let lotteryTableData = [];
+    // reset the lottery table data
     setLotteryRows([]);
+
     for (let i = 0; i < lotteryRowsNumber; i++) {
-      // Generate new numbers for each state
-      let currentRow = [];
+      // generate new numbers for each state
+      let currentRow = []; 
+
       let lotteryRow = {
         number1: getRandomNumber(1, 37, currentRow),
         number2: getRandomNumber(1, 37, currentRow),
@@ -48,22 +87,27 @@ export const LotteryLotto = (props) => {
         strongNumber: getRandomNumber(1, 7, null)
       }
       
-      setLotteryRows(prevLotteryRows => [...prevLotteryRows, lotteryRow]);
+      lotteryTableData.push(lotteryRow);
     }
+
+    setLotteryRows(lotteryTableData);
+    // save the table data into session storage
+    const lotteryTableDataJSON = JSON.stringify(lotteryTableData); // convert the object into a JSON string
+    sessionStorage.setItem(sessionStorageKeyName, lotteryTableDataJSON); // store the JSON string under the key "lastLottoTableData"
   };
 
   const increaseRowsNumber = () => {
-    // Check that the lotteryRowsNumber is less than the maximum value, say 10
+    // check that the lotteryRowsNumber is less than the maximum value, say 10
     if (lotteryRowsNumber < 14) {
-      // Increase the lotteryRowsNumber by 1
+      // increase the lotteryRowsNumber by 1
       setLotteryRowsNumber(lotteryRowsNumber + 1);
     }
   };
   
   const decreaseRowsNumber = () => {
-    // Check that the lotteryRowsNumber is greater than the minimum value, say 1
+    // check that the lotteryRowsNumber is greater than the minimum value, say 1
     if (lotteryRowsNumber > 1) {
-      // Decrease the lotteryRowsNumber by 1
+      // decrease the lotteryRowsNumber by 1
       setLotteryRowsNumber(lotteryRowsNumber - 1);
     }
   };
@@ -95,7 +139,7 @@ export const LotteryLotto = (props) => {
       </div>
       <div className="lotteryRows">
         {
-          lotteryRows.length > 0 ? ( // Check if the lotteryRows array is not empty
+          lotteryRows.length > 0 ? ( // check if the lotteryRows array is not empty
             <table>
               <thead>
                 <tr>
@@ -123,7 +167,7 @@ export const LotteryLotto = (props) => {
                   }
               </tbody>
             </table>
-          ) : ( // If the lotteryRows array is empty, render nothing
+          ) : ( // if the lotteryRows array is empty, render nothing
             null
           )}
       </div>

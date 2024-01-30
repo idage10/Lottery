@@ -56,7 +56,7 @@ export const Navbar = (props) => {
             <ul className={`navMenuButtons ${menuOpen ? "open" : ""} ${isShowMenuAnimation ? "showMenuAnimation" : ""}`}>
                 {
                     navBarMenuButtonsData.map((buttonData, index) => (
-                        <li>
+                        <li key={index}>
                             <NavLink 
                                 to={buttonData?.navLinkTo}
                                 className={buttonData?.navLinkClassName}
