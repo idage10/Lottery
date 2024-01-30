@@ -8,9 +8,9 @@ import React, { useState } from 'react';
 export const Main = () => {
   // close menu after clicking the main body page in mobile resolution
   const [isClickOnMobileMainPage, setClickOnMobileMainPage] = useState(false);
-  // use to define if running after page refresh or new app is running
-  const [isFirstPageRefreshLotto, setFirstPageRefreshLotto] = useState(true);
-  const [isFirstPageRefresh777, setFirstPageRefresh777] = useState(true);
+  // use to clear the session storage data for each component after new app session or refresh only once
+  const [isClearSessionStorageLotto, setClearSessionStorageLotto] = useState(true);
+  const [isClearSessionStorage777, setClearSessionStorage777] = useState(true);
   
   const navBarTitleData = {
     titleName: "מפעל הפיס", alt: "לוגו מפעל הפיס", className: "paisLogo",
@@ -39,8 +39,8 @@ export const Main = () => {
           element={
             <LotteryLotto 
               setClickOnMobileMainPage={setClickOnMobileMainPage}
-              isFirstPageRefreshLotto={isFirstPageRefreshLotto}
-              setFirstPageRefreshLotto={setFirstPageRefreshLotto}
+              isClearSessionStorageLotto={isClearSessionStorageLotto}
+              setClearSessionStorageLotto={setClearSessionStorageLotto}
             />
           } 
         />
@@ -49,8 +49,8 @@ export const Main = () => {
           element={
             <Lottery777 
               setClickOnMobileMainPage={setClickOnMobileMainPage}
-              isFirstPageRefresh777={isFirstPageRefresh777}
-              setFirstPageRefresh777={setFirstPageRefresh777}
+              isClearSessionStorage777={isClearSessionStorage777}
+              setClearSessionStorage777={setClearSessionStorage777}
             />
           } 
         />
