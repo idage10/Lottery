@@ -47,7 +47,7 @@ export const Lottery777 = (props) => {
       else if (lastLotteryDataJSON != null)
       {
         const lastLotteryData = JSON.parse(lastLotteryDataJSON);
-        setLotteryRows(lastLotteryData.tableData);
+        setLotteryRows(lastLotteryData.lotteryRows);
         setLotteryRowsNumber(lastLotteryData.rowsNumber);
       }
     }
@@ -69,7 +69,7 @@ export const Lottery777 = (props) => {
 
   // A function to handle the button click
   const handleClick = () => {
-    let lotteryTableData = [];
+    let lotteryRowsData = [];
     // reset the 777 state rows data
     setLotteryRows([]);
 
@@ -86,13 +86,13 @@ export const Lottery777 = (props) => {
         number7: getRandomNumber(1, 70, currentRow)
       }
       
-      lotteryTableData.push(lotteryRow);
+      lotteryRowsData.push(lotteryRow);
     }
 
-    setLotteryRows(lotteryTableData);
+    setLotteryRows(lotteryRowsData);
     // save the table data and lottery rows number into session storage
     const lastLotteryData = {
-      tableData: lotteryTableData,
+      lotteryRows: lotteryRowsData,
       rowsNumber: lotteryRowsNumber
     };
     const lastLotteryDataJSON = JSON.stringify(lastLotteryData); // convert the object into a JSON string
