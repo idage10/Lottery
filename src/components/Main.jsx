@@ -8,9 +8,6 @@ import React, { useState } from 'react';
 export const Main = () => {
   // close menu after clicking the main body page in mobile resolution
   const [isClickOnMobileMainPage, setClickOnMobileMainPage] = useState(false);
-  // use to clear the session storage data for each component after new app session or refresh only once
-  const [isClearSessionStorageLotto, setClearSessionStorageLotto] = useState(true);
-  const [isClearSessionStorage777, setClearSessionStorage777] = useState(true);
   
   const navBarTitleData = {
     titleName: "מפעל הפיס", alt: "לוגו מפעל הפיס", className: "paisLogo",
@@ -37,21 +34,13 @@ export const Main = () => {
         <Route 
           path="/lotto" 
           element={
-            <LotteryLotto 
-              setClickOnMobileMainPage={setClickOnMobileMainPage}
-              isClearSessionStorageLotto={isClearSessionStorageLotto}
-              setClearSessionStorageLotto={setClearSessionStorageLotto}
-            />
+            <LotteryLotto setClickOnMobileMainPage={setClickOnMobileMainPage} />
           } 
         />
         <Route 
           path="/777" 
           element={
-            <Lottery777 
-              setClickOnMobileMainPage={setClickOnMobileMainPage}
-              isClearSessionStorage777={isClearSessionStorage777}
-              setClearSessionStorage777={setClearSessionStorage777}
-            />
+            <Lottery777 setClickOnMobileMainPage={setClickOnMobileMainPage} />
           } 
         />
       </Routes>

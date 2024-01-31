@@ -24,7 +24,7 @@ const getRandomNumber = (min, max, currentRow) => {
 
 // a functional component to display the lottery button and numbers
 export const LotteryLotto = (props) => {
-  const { setClickOnMobileMainPage, isClearSessionStorageLotto, setClearSessionStorageLotto } = props;
+  const { setClickOnMobileMainPage } = props;
   // use the custom hook to generate lotteryRowsNumber button
   const [lotteryRowsNumber, setLotteryRowsNumber] = useState(1);
   // use the custom hook to generate lottery rows list
@@ -39,12 +39,7 @@ export const LotteryLotto = (props) => {
     const handleSessionStorageData = async () => {
       const lastLotteryDataJSON = sessionStorage.getItem(sessionStorageKeyName);
   
-      // clear the session storage data for the current component key after new app session or page refresh only once
-      if (isClearSessionStorageLotto) {        
-        await clearSessionStorageByKeyName(); // clear the session storage data
-        setClearSessionStorageLotto(false); // update the state after clearing the sessionStorage
-      }
-      else if (lastLotteryDataJSON != null)
+      if (lastLotteryDataJSON != null)
       {
         const lastLotteryData = JSON.parse(lastLotteryDataJSON);
         setLotteryRows(lastLotteryData.lotteryRows);
@@ -54,7 +49,7 @@ export const LotteryLotto = (props) => {
   
     // call the async function
     handleSessionStorageData();
-  }, [isClearSessionStorageLotto, setClearSessionStorageLotto]);
+  }, []);
 
   // an async function that clears the sessionStorage
   const clearSessionStorageByKeyName = async () => {
