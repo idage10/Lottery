@@ -75,6 +75,10 @@
   }
 }
 
+table.lotteryTable {
+  width: 22rem;
+}
+
 td {
   background-color: #ececec;
 }
@@ -90,16 +94,11 @@ td {
   vertical-align: middle;
 }
 
-.tdRowNumber {
-  width: 2em;
-}
-
 .tdStrongNumber {
   width: 6em;
 }
 
 .lotteryRows .lotteryNumbersCircle {
-  margin-left: 4px;
   color: #fff;
   border-radius: 50%;
   width: 1.8em;

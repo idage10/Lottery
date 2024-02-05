@@ -144,7 +144,7 @@ export const LotteryLotto = (props) => {
             <table className="lotteryTable">
               <thead>
                 <tr>
-                  <th className="tdRowNumber">שורה</th>
+                  <th className="tdLottoRowNumber">שורה</th>
                   <th className="tdStrongNumber">המספר החזק</th>
                   <th className="tdLotteryNumbers">מספרים שהוגרלו</th>
                 </tr>
@@ -153,7 +153,7 @@ export const LotteryLotto = (props) => {
                   {
                     lotteryRows.map((lotteryRow, index) => (
                       <tr key={index}>
-                        <td className="tdRowNumber">{index + 1}</td>
+                        <td className="tdLottoRowNumber">{index + 1}</td>
                         <td className="tdStrongNumber"><span className="strongNumberCircle">{lotteryRow.strongNumber}</span></td>
                         <td className="tdLotteryNumbers">
                           <span className="lotteryNumbersCircle">{lotteryRow.number1}</span>

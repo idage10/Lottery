@@ -143,7 +143,7 @@ export const Lottery777 = (props) => {
             <table className="lotteryTable">
               <thead>
                 <tr>
-                  <th className="tdRowNumber">שורה</th>
+                  <th className="td777RowNumber">שורה</th>
                   <th className="tdLotterySevenNumbers">מספרים שהוגרלו</th>
                 </tr>
               </thead>
@@ -151,7 +151,7 @@ export const Lottery777 = (props) => {
                 {
                   lotteryRows.map((lotteryRow, index) => (
                     <tr key={index}>
-                      <td className="tdRowNumber">{index + 1}</td>
+                      <td className="td777RowNumber">{index + 1}</td>
                       <td className="tdLotterySevenNumbers">
                         <span className="lotteryNumbersCircle lotterySevenNumbersCircle">{lotteryRow.number1}</span>
                         <span className="lotteryNumbersCircle lotterySevenNumbersCircle">{lotteryRow.number2}</span>
