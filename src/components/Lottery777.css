@@ -9,11 +9,11 @@
 }
 
 .td777RowNumber {
-  width: 5rem;
+  width: 4rem;
 }
 
 .tdLotterySevenNumbers {
-    width: 17rem;
+    width: 15rem;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -21,6 +21,6 @@
 
 .lotteryRows .lotterySevenNumbersCircle {
   background-color: #eb1e75;
-  margin-left: 3px;
-  margin-right: 3px;
+  margin-left: 2px;
+  margin-right: 2px;
 }
