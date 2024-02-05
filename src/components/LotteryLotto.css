@@ -13,10 +13,14 @@
 }
 
 .tdLotteryNumbers {
-  width: 13rem;
+  width: 14rem;
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.tdStrongNumber {
+  width: 6em;
 }
 
 .lotteryRows .lotteryNumbersCircle {

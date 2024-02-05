@@ -75,27 +75,19 @@
   }
 }
 
-table.lotteryTable {
-  width: 22rem;
-}
-
 td {
   background-color: #ececec;
 }
 
 .lotteryRows table {
   padding-top: 20px;
-  font-size: 1em;
+  font-size: 1rem;
   font-weight: 800;
 }
 
 .lotteryRows td {
   text-align: center;
   vertical-align: middle;
-}
-
-.tdStrongNumber {
-  width: 6em;
 }
 
 .lotteryRows .lotteryNumbersCircle {
