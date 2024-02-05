@@ -133,8 +133,8 @@ export const Lottery777 = (props) => {
       </div>
       <div className="lotteryButtons">
         <button onClick={handleClick}>הגרל מספרים</button>
-        <button onClick={increaseRowsNumber}>+</button>
-        <button onClick={decreaseRowsNumber}>-</button>
+        <button className="symbolButton" onClick={increaseRowsNumber}>+</button>
+        <button className="symbolButton" onClick={decreaseRowsNumber}>-</button>
         <button onClick={resetRowsNumber}>איפוס</button>
       </div>
       <div className="lotteryRows">

@@ -9,18 +9,30 @@
 }
 
 .td777RowNumber {
-  width: 2rem;
+  width: 5%;
 }
 
 .tdLotterySevenNumbers {
-    width: 15rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  width: 95%;
 }
 
 .lotteryRows .lotterySevenNumbersCircle {
   background-color: #eb1e75;
-  margin-left: 2px;
-  margin-right: 2px;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+@media (max-width: 480px) { /* mobile resolution */
+  .td777RowNumber {
+    width: 2rem;
+  }
+  
+  .tdLotterySevenNumbers {
+    width: 15rem;
+  }
+
+  .lotteryRows .lotterySevenNumbersCircle {
+    margin-left: 2px;
+    margin-right: 2px;
+  }
 }

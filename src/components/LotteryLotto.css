@@ -9,32 +9,48 @@
 }
 
 .tdLottoRowNumber {
-  width: 2rem;
-}
-
-.tdLotteryNumbers {
-  width: 13.5rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  width: 5%;
 }
 
 .tdStrongNumber {
-  width: 6.5em;
+  width: 15%;
+}
+
+.tdLotteryNumbers {
+  width: 80%;
 }
 
 .lotteryRows .lotteryNumbersCircle {
   background-color: #e31d1a;
-  margin-left: 3px;
-  margin-right: 3px;
+  margin-left: 10px;
+  margin-right: 10px;
 }
 
 .lotteryRows .strongNumberCircle {
   background-color: #99d4f0;
   border-radius: 50%;
-  width: 1.8rem;
-  height: 1.8rem;
+  width: 1.8em; /* need to be em and not rem (relative to the table font and not to the html font) */
+  height: 1.8em; /* need to be em and not rem (relative to the table font and not to the html font) */
   display: inline-block;
-  line-height: 1.8rem;
+  line-height: 1.8em; /* need to be em and not rem (relative to the table font and not to the html font) */
   text-align: center;
+}
+
+@media (max-width: 480px) { /* mobile resolution */
+  .tdLottoRowNumber {
+    width: 2rem;
+  }
+  
+  .tdLotteryNumbers {
+    width: 13.5rem;
+  }
+  
+  .tdStrongNumber {
+    width: 6.5em;
+  }
+
+  .lotteryRows .lotteryNumbersCircle {
+    margin-left: 3px;
+    margin-right: 3px;
+  }
 }
