@@ -26,6 +26,7 @@
 .lotteryRows .lotteryNumbersCircle {
   background-color: #e31d1a;
   margin-left: 4px;
+  margin-right: 4px;
 }
 
 .lotteryRows .strongNumberCircle {

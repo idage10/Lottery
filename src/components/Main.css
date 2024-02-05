@@ -83,6 +83,7 @@ td {
   padding-top: 20px;
   font-size: 1rem;
   font-weight: 800;
+  border-collapse: separate; /* add separate line between table tds (this is also the default value for the table)*/
 }
 
 .lotteryRows td {
