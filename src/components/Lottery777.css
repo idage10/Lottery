@@ -3,8 +3,8 @@
 }
 
 .mainPageTitle .lotteryTitleStyle .mainPageTitleLogo777 {
-  height: 45px;
-  width: 120px;
+  height: 60px;
+  width: 155px;
   margin-top: 3px;
 }
 
@@ -14,6 +14,7 @@
 
 .tdLotterySevenNumbers {
   width: 95%;
+  white-space: nowrap;
 }
 
 .lotteryRows .lotterySevenNumbersCircle {
@@ -23,12 +24,18 @@
 }
 
 @media (max-width: 480px) { /* mobile resolution */
+  .mainPageTitle .lotteryTitleStyle .mainPageTitleLogo777 {
+    height: 45px;
+    width: 120px;
+  }
+
   .td777RowNumber {
-    width: 2rem;
+    width: 5%;
   }
   
   .tdLotterySevenNumbers {
-    width: 15rem;
+    width: 95%;
+    white-space: normal;
   }
 
   .lotteryRows .lotterySevenNumbersCircle {

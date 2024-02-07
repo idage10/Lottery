@@ -4,9 +4,9 @@
 }
 
 .mainLotteryDiv {
-  margin-top: 25px;
+  margin-top: 10px;
   position: relative;
-  height: calc(100% - 7rem - 25px); /* view height calculation is (100% of the window - nav height - 25px of .mainLotteryDiv margin-top) */
+  height: calc(100% - 9.8rem - 10px); /* view height calculation is (100% of the window - nav height - 25px of .mainLotteryDiv margin-top) */
   width: 100%;
 }
 
@@ -18,7 +18,7 @@
   font-size: 25px;
   font-weight: 800;
   margin-right: 1em;
-  height: 60px;
+  height: 75px;
 }
 
 .lotteryTitleStyle {
@@ -26,6 +26,7 @@
 }
 
 .rowsNumber {
+  font-size: 1.9rem;
   color: #223977;
   margin-left: 0.5em;
   width: 5.5em;
@@ -42,21 +43,21 @@
 .lotteryButtons button {
   background-color: #223977;
   color: #fff;
-  border-radius: 6px;
+  border-radius: 8px;
   font-weight: 700;
   letter-spacing: 1px;
   padding-left: 8px;
   padding-right: 8px;
-  padding-top: 3px;
-  padding-bottom: 3px;
-  font-size: 1.2em;
+  padding-top: 2px;
+  padding-bottom: 2px;
+  font-size: 1.8em;
   margin-left: 15px;
   cursor: pointer;
 }
 
 .lotteryButtons button.symbolButton {
   letter-spacing: 0px;
-  width: 2rem;
+  width: 2.5rem;
 }
 
 .lotteryButtons button:hover {
@@ -111,12 +112,26 @@ tbody, tr {
 }
 
 @media only screen and (max-width: 480px) { /* mobile resolution */
+  .lotteryButtons button {
+    height: 2rem;
+    font-size: 1.2rem;
+  }
+
   .mainLotteryDiv {
-    height: calc(100% - 3.8rem - 25px); /* view height calculation is (100% of the window - nav height - 25px of .mainLotteryDiv margin-top) */
+    height: calc(100% - 3.8rem); /* view height calculation is (100% of the window - nav height - 25px of .mainLotteryDiv margin-top) */
+    margin-top: 0px;
+  }
+
+  .mainPageTitle {
+    height: 70px;
+  }
+
+  .rowsNumber {
+    font-size: 1.7rem;
   }
 
   .lotteryRows table {
-    width: auto;
+    width: 100%;
     font-size: 1rem;
   }
 }

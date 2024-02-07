@@ -23,10 +23,11 @@ nav {
     position: relative;
     top: 0;
     z-index: 999;
+    height: 9.8rem;
 }
 
 nav .navigationTitle {
-    font-size: 1.5rem;
+    font-size: 3rem;
     font-weight: bold;
     text-decoration: none;
     color: white;
@@ -36,18 +37,17 @@ nav .navigationTitle {
 }
 
 nav .navigationTitle .paisLogo {
-    height: 45px;
-    width: 45px;
+    height: 70px;
+    width: 65px;
     margin-left: 0.4rem;
 }
 
 nav .navMenuButtons .navLoggoLotto, nav .navMenuButtons .navLoggo777 {
-    height: 30px;
-    width: 70px;
+    height: 45px;
+    width: 120px;
 }
 
-nav .navMenuButtons .navLoggoLotto
-{
+nav .navMenuButtons .navLoggoLotto {
     padding-top: 3px;
 }
 
@@ -86,7 +86,21 @@ nav .menu {
 
 @media (max-width: 480px) { /* mobile resolution */
     nav .navigationTitle {
+        font-size: 1.5rem;
+    }
+
+    nav .navigationTitle .paisLogo {
+        height: 45px;
+        width: 45px;
+    }
+
+    nav .navigationTitle {
         margin-top: 0.5rem;
+    }
+
+    nav .navMenuButtons .navLoggoLotto, nav .navMenuButtons .navLoggo777 {
+        height: 30px;
+        width: 70px;
     }
     
     nav .menu {
