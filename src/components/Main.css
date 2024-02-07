@@ -115,6 +115,8 @@ tbody, tr {
   .lotteryButtons button {
     height: 2rem;
     font-size: 1.2rem;
+    margin-left: 5px;
+    margin-right: 5px;
   }
 
   .mainLotteryDiv {
