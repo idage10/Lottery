@@ -156,12 +156,12 @@ export const LotteryLotto = (props) => {
                         <td className="tdLottoRowNumber">{index + 1}</td>
                         <td className="tdStrongNumber"><span className="strongNumberCircle">{lotteryRow.strongNumber}</span></td>
                         <td className="tdLotteryNumbers">
-                          <span className="lotteryNumbersCircle">{lotteryRow.number1}</span>
-                          <span className="lotteryNumbersCircle">{lotteryRow.number2}</span>
-                          <span className="lotteryNumbersCircle">{lotteryRow.number3}</span>
-                          <span className="lotteryNumbersCircle">{lotteryRow.number4}</span>
-                          <span className="lotteryNumbersCircle">{lotteryRow.number5}</span>
-                          <span className="lotteryNumbersCircle">{lotteryRow.number6}</span>
+                          <span className="lotteryNumbersCircle lotteryLottoNumbersCircle">{lotteryRow.number1}</span>
+                          <span className="lotteryNumbersCircle lotteryLottoNumbersCircle">{lotteryRow.number2}</span>
+                          <span className="lotteryNumbersCircle lotteryLottoNumbersCircle">{lotteryRow.number3}</span>
+                          <span className="lotteryNumbersCircle lotteryLottoNumbersCircle">{lotteryRow.number4}</span>
+                          <span className="lotteryNumbersCircle lotteryLottoNumbersCircle">{lotteryRow.number5}</span>
+                          <span className="lotteryNumbersCircle lotteryLottoNumbersCircle">{lotteryRow.number6}</span>
                         </td>
                       </tr>
                     ))

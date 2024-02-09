@@ -21,7 +21,7 @@
   white-space: nowrap;
 }
 
-.lotteryRows .lotteryNumbersCircle {
+.lotteryRows .lotteryLottoNumbersCircle {
   background-color: #e31d1a;
   margin-left: 10px;
   margin-right: 10px;
@@ -38,10 +38,6 @@
 }
 
 @media (max-width: 1150px) { /* windows resolution for smaller screens */
-  .tdLottoRowNumber {
-    width: 5%;
-  }
-
   .tdStrongNumber {
     width: 20%;
   }
@@ -52,10 +48,6 @@
 }
 
 @media (max-width: 900px) { /* windows resolution for smaller screens */
-  .tdLottoRowNumber {
-    width: 5%;
-  }
-
   .tdStrongNumber {
     width: 30%;
   }
@@ -65,14 +57,25 @@
   }
 }
 
+@media (max-width: 730px) { /* windows resolution for smaller screens */
+  .tdStrongNumber {
+    width: 35%;
+  }
+  
+  .tdLotteryNumbers {
+    width: 60%;
+  }
+
+  .lotteryRows .lotteryLottoNumbersCircle {
+    margin-left: 3px;
+    margin-right: 3px;
+  }
+}
+
 @media (max-width: 480px) { /* mobile resolution */
   .mainPageTitle .lotteryTitleStyle .mainPageTitleLogoLotto {
     height: 45px;
     width: 120px;
-  }
-
-  .tdLottoRowNumber {
-    width: 5%;
   }
 
   .tdStrongNumber {
@@ -83,18 +86,9 @@
     width: 70%;
     white-space: normal;
   }
-
-  .lotteryRows .lotteryNumbersCircle {
-    margin-left: 3px;
-    margin-right: 3px;
-  }
 }
 
 @media (max-width: 380px) { /* mobile resolution */
-  .tdLottoRowNumber {
-    width: 5%;
-  }
-
   .tdStrongNumber {
     width: 30%;
   }
