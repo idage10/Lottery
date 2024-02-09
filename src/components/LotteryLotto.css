@@ -37,6 +37,34 @@
   text-align: center;
 }
 
+@media (max-width: 1150px) { /* windows resolution for smaller screens */
+  .tdLottoRowNumber {
+    width: 5%;
+  }
+
+  .tdStrongNumber {
+    width: 20%;
+  }
+  
+  .tdLotteryNumbers {
+    width: 75%;
+  }
+}
+
+@media (max-width: 900px) { /* windows resolution for smaller screens */
+  .tdLottoRowNumber {
+    width: 5%;
+  }
+
+  .tdStrongNumber {
+    width: 30%;
+  }
+  
+  .tdLotteryNumbers {
+    width: 65%;
+  }
+}
+
 @media (max-width: 480px) { /* mobile resolution */
   .mainPageTitle .lotteryTitleStyle .mainPageTitleLogoLotto {
     height: 45px;
