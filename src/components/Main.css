@@ -43,6 +43,7 @@
 .lotteryButtons button {
   background-color: #223977;
   color: #fff;
+  cursor: pointer;
   border-radius: 8px;
   font-weight: 700;
   letter-spacing: 1px;
@@ -51,7 +52,7 @@
   font-size: 1.8rem;
   margin-left: 15px;
   height: 2.55rem;
-  cursor: pointer;
+  line-height: 2.55rem;
 }
 
 .lotteryButtons button.symbolButton {
@@ -113,6 +114,7 @@ tbody, tr {
 @media only screen and (max-width: 480px) { /* mobile resolution */
   .lotteryButtons button {
     height: 2.2rem;
+    line-height: 2.2rem;
     font-size: 1.2rem;
     margin-left: 5px;
     margin-right: 5px;
