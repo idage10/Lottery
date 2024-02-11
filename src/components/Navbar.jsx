@@ -36,8 +36,7 @@ export const Navbar = (props) => {
     }
 
     const onClickNavLink = () => {
-        if (isMobileScreen)
-        {
+        if (isMobileScreen) {
             setMenuOpen(!menuOpen);
         }
     }
