@@ -31,31 +31,25 @@ export const LotteryLotto = (props) => {
   const [lotteryRows, setLotteryRows] = useState([]);
   // use the hook to check the screen size
   const isMobileScreen = useMediaQuery("(max-width: 480px)");
-  // sessionStorage key name
-  const sessionStorageKeyName = "lastLotteryDataLotto";
+  // localStorage key name
+  const localStorageKeyName = "lastLotteryDataLotto";
 
   React.useEffect(() => {
-    // define an async function
-    const handleSessionStorageData = async () => {
-      const lastLotteryDataJSON = sessionStorage.getItem(sessionStorageKeyName);
-  
-      if (lastLotteryDataJSON != null)
-      {
-        const lastLotteryData = JSON.parse(lastLotteryDataJSON);
-        setLotteryRows(lastLotteryData.lotteryRows);
-        setLotteryRowsNumber(lastLotteryData.rowsNumber);
-      }
+    // get local storage data on component init
+    const lastLotteryDataJSON = localStorage.getItem(localStorageKeyName);
+    if (lastLotteryDataJSON != null)
+    {
+      const lastLotteryData = JSON.parse(lastLotteryDataJSON);
+      setLotteryRows(lastLotteryData.lotteryRows);
+      setLotteryRowsNumber(lastLotteryData.rowsNumber);
     }
-  
-    // call the async function
-    handleSessionStorageData();
   }, []);
 
-  // an async function that clears the sessionStorage
-  const clearSessionStorageByKeyName = async () => {
-    // try to clear the sessionStorage
+  // an async function that clears the localStorage
+  const clearLocalStorageByKeyName = async () => {
+    // try to clear the localStorage
     try {
-      sessionStorage.removeItem(sessionStorageKeyName);
+      localStorage.removeItem(localStorageKeyName);
     } catch (error) {
       // throw the error
       throw error;
@@ -86,13 +80,13 @@ export const LotteryLotto = (props) => {
     }
 
     setLotteryRows(lotteryRowsData);
-    // save the table data and lottery rows number into session storage
+    // save the table data and lottery rows number into local storage
     const lastLotteryData = {
       lotteryRows: lotteryRowsData,
       rowsNumber: lotteryRowsNumber
     };
     const lastLotteryDataJSON = JSON.stringify(lastLotteryData); // convert the object into a JSON string
-    sessionStorage.setItem(sessionStorageKeyName, lastLotteryDataJSON); // store the JSON string under the key "lastLottoTableData"
+    localStorage.setItem(localStorageKeyName, lastLotteryDataJSON); // store the JSON string under the key "lastLottoTableData"
   };
 
   const increaseRowsNumber = () => {
@@ -114,8 +108,8 @@ export const LotteryLotto = (props) => {
   const resetRowsNumber = async () => {
     setLotteryRowsNumber(1);
     setLotteryRows([]);
-    // clear the session storage data of the current component
-    await clearSessionStorageByKeyName();
+    // clear the local storage data of the current component
+    await clearLocalStorageByKeyName();
   };
 
   const onClickMainLotteryDiv = () => {
